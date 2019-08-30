@@ -40,7 +40,7 @@
 
 On the repository you have a lot of files and the following are really important.
 
-![Important files in the project](/assets/images/Experiment.png)
+![Important files in the project](../blob/master/Experiment.png)
 
 ## Where do i put my files
 
