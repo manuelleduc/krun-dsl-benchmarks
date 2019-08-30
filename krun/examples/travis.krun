@@ -1,0 +1,3 @@
+execfile("java.krun", globals())
+
+N_EXECUTIONS = 1  # Keep travis-ci runs short

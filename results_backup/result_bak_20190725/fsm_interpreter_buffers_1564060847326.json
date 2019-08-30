@@ -1,0 +1,56 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "fr.mleduc.fsm.FsmInterpreterBenchmark.fsmInterpreter",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/benchmarks/jvms/hotspot_11.0.4/bin/java",
+        "jvmArgs" : [
+            "-Xms4G",
+            "-Xmx4G"
+        ],
+        "jdkVersion" : "11.0.4",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "11.0.4+11",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "program" : "/home/benchmarks/programs/fsm_buffers.xmi"
+        },
+        "primaryMetric" : {
+            "score" : 0.001385576,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.001385576,
+                "50.0" : 0.001385576,
+                "90.0" : 0.001385576,
+                "95.0" : 0.001385576,
+                "99.0" : 0.001385576,
+                "99.9" : 0.001385576,
+                "99.99" : 0.001385576,
+                "99.999" : 0.001385576,
+                "99.9999" : 0.001385576,
+                "100.0" : 0.001385576
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    0.001385576
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

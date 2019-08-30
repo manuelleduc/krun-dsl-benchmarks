@@ -1,0 +1,15 @@
+execfile("example.krun", globals())
+
+from krun.vm_defs import JavaVMDef
+
+JAVA_BIN = find_executable("java")
+if JAVA_BIN is None:
+    fatal("Java binary not found in path")
+
+VARIANTS["default-java"] = EntryPoint("KrunEntry", subdir="java")
+
+VMS['Java'] = {
+    'vm_def': JavaVMDef(JAVA_BIN),
+    'variants': ['default-java'],
+    'n_iterations': ITERATIONS_ALL_VMS,
+}

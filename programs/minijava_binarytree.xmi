@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="ASCII"?>
+<miniJava:Program xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:miniJava="http://miniJava.miniJava.miniJava/">
+  <imports importedNamespace="java.util.concurrent.ExecutorService"/>
+  <imports importedNamespace="java.util.concurrent.Executors"/>
+  <imports importedNamespace="java.util.concurrent.TimeUnit"/>
+  <classes xsi:type="miniJava:Clazz" name="TreeNode">
+    <members xsi:type="miniJava:Field" name="left">
+      <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+    </members>
+    <members xsi:type="miniJava:Field" name="right">
+      <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+    </members>
+    <members xsi:type="miniJava:Method">
+      <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+      <params name="i_left">
+        <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+      </params>
+      <params name="i_right">
+        <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+      </params>
+      <body>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:FieldAccess" field="//@classes.0/@members.0">
+            <receiver xsi:type="miniJava:This"/>
+          </assignee>
+          <value xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.2/@params.0"/>
+        </statements>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:FieldAccess" field="//@classes.0/@members.1">
+            <receiver xsi:type="miniJava:This"/>
+          </assignee>
+          <value xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.2/@params.1"/>
+        </statements>
+      </body>
+    </members>
+    <members xsi:type="miniJava:Method" name="createNode" access="public">
+      <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+      <params name="i_depth">
+        <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+      </params>
+      <body>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="bottomTree">
+            <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+          </assignee>
+          <value xsi:type="miniJava:NewObject" type="//@classes.0">
+            <args xsi:type="miniJava:Null"/>
+            <args xsi:type="miniJava:Null"/>
+          </value>
+        </statements>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="ret">
+            <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+          </assignee>
+          <value xsi:type="miniJava:Null"/>
+        </statements>
+        <statements xsi:type="miniJava:IfStatement">
+          <expression xsi:type="miniJava:Equality">
+            <left xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.3/@params.0"/>
+            <right xsi:type="miniJava:IntConstant"/>
+          </expression>
+          <thenBlock>
+            <statements xsi:type="miniJava:Assignment">
+              <assignee xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.3/@body/@statements.1/@assignee"/>
+              <value xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.3/@body/@statements.0/@assignee"/>
+            </statements>
+          </thenBlock>
+          <elseBlock>
+            <statements xsi:type="miniJava:Assignment">
+              <assignee xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.3/@body/@statements.1/@assignee"/>
+              <value xsi:type="miniJava:MethodCall" method="//@classes.0/@members.4">
+                <receiver xsi:type="miniJava:This"/>
+                <args xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.3/@params.0"/>
+                <args xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.3/@body/@statements.0/@assignee"/>
+              </value>
+            </statements>
+          </elseBlock>
+        </statements>
+        <statements xsi:type="miniJava:Return">
+          <expression xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.3/@body/@statements.1/@assignee"/>
+        </statements>
+      </body>
+    </members>
+    <members xsi:type="miniJava:Method" name="createNodeRec">
+      <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+      <params name="i_depth">
+        <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+      </params>
+      <params name="i_accumulator">
+        <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+      </params>
+      <body>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="accumulator">
+            <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+          </assignee>
+          <value xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.4/@params.1"/>
+        </statements>
+        <statements xsi:type="miniJava:IfStatement">
+          <expression xsi:type="miniJava:Superior">
+            <left xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.4/@params.0"/>
+            <right xsi:type="miniJava:IntConstant"/>
+          </expression>
+          <thenBlock>
+            <statements xsi:type="miniJava:Assignment">
+              <assignee xsi:type="miniJava:VariableDeclaration" name="depth">
+                <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+              </assignee>
+              <value xsi:type="miniJava:Minus">
+                <left xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.4/@params.0"/>
+                <right xsi:type="miniJava:IntConstant" value="1"/>
+              </value>
+            </statements>
+            <statements xsi:type="miniJava:Assignment">
+              <assignee xsi:type="miniJava:FieldAccess" field="//@classes.0/@members.0">
+                <receiver xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.4/@body/@statements.0/@assignee"/>
+              </assignee>
+              <value xsi:type="miniJava:MethodCall" method="//@classes.0/@members.3">
+                <receiver xsi:type="miniJava:This"/>
+                <args xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.4/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+              </value>
+            </statements>
+            <statements xsi:type="miniJava:Assignment">
+              <assignee xsi:type="miniJava:FieldAccess" field="//@classes.0/@members.1">
+                <receiver xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.4/@body/@statements.0/@assignee"/>
+              </assignee>
+              <value xsi:type="miniJava:MethodCall" method="//@classes.0/@members.3">
+                <receiver xsi:type="miniJava:This"/>
+                <args xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.4/@body/@statements.1/@thenBlock/@statements.0/@assignee"/>
+              </value>
+            </statements>
+          </thenBlock>
+        </statements>
+        <statements xsi:type="miniJava:Return">
+          <expression xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.4/@body/@statements.0/@assignee"/>
+        </statements>
+      </body>
+    </members>
+    <members xsi:type="miniJava:Method" name="checkNode" access="public">
+      <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+      <body>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="ret">
+            <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+          </assignee>
+          <value xsi:type="miniJava:IntConstant"/>
+        </statements>
+        <statements xsi:type="miniJava:IfStatement">
+          <expression xsi:type="miniJava:Equality">
+            <left xsi:type="miniJava:FieldAccess" field="//@classes.0/@members.0">
+              <receiver xsi:type="miniJava:This"/>
+            </left>
+            <right xsi:type="miniJava:Null"/>
+          </expression>
+          <thenBlock>
+            <statements xsi:type="miniJava:Assignment">
+              <assignee xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.5/@body/@statements.0/@assignee"/>
+              <value xsi:type="miniJava:IntConstant" value="1"/>
+            </statements>
+          </thenBlock>
+          <elseBlock>
+            <statements xsi:type="miniJava:Assignment">
+              <assignee xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.5/@body/@statements.0/@assignee"/>
+              <value xsi:type="miniJava:Plus">
+                <left xsi:type="miniJava:Plus">
+                  <left xsi:type="miniJava:MethodCall" method="//@classes.0/@members.5">
+                    <receiver xsi:type="miniJava:FieldAccess" field="//@classes.0/@members.0">
+                      <receiver xsi:type="miniJava:This"/>
+                    </receiver>
+                  </left>
+                  <right xsi:type="miniJava:MethodCall" method="//@classes.0/@members.5">
+                    <receiver xsi:type="miniJava:FieldAccess" field="//@classes.0/@members.1">
+                      <receiver xsi:type="miniJava:This"/>
+                    </receiver>
+                  </right>
+                </left>
+                <right xsi:type="miniJava:IntConstant" value="1"/>
+              </value>
+            </statements>
+          </elseBlock>
+        </statements>
+        <statements xsi:type="miniJava:Return">
+          <expression xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.5/@body/@statements.0/@assignee"/>
+        </statements>
+      </body>
+    </members>
+  </classes>
+  <classes xsi:type="miniJava:Clazz" name="Binarytrees" accessLevel="public">
+    <members xsi:type="miniJava:Method" name="main" access="public" isstatic="true">
+      <typeRef xsi:type="miniJava:VoidTypeRef"/>
+      <params name="args">
+        <typeRef xsi:type="miniJava:ArrayTypeRef">
+          <typeRef xsi:type="miniJava:StringTypeRef"/>
+        </typeRef>
+      </params>
+      <body>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="n">
+            <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+          </assignee>
+          <value xsi:type="miniJava:IntConstant" value="11"/>
+        </statements>
+        <statements xsi:type="miniJava:PrintStatement">
+          <expression xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.0/@body/@statements.0/@assignee"/>
+        </statements>
+        <statements xsi:type="miniJava:MethodCall" method="//@classes.1/@members.3">
+          <receiver xsi:type="miniJava:NewObject" type="//@classes.1"/>
+          <args xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.0/@body/@statements.0/@assignee"/>
+        </statements>
+      </body>
+    </members>
+    <members xsi:type="miniJava:Method" name="pow" access="public" isstatic="true">
+      <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+      <params name="x">
+        <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+      </params>
+      <body>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="base">
+            <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+          </assignee>
+          <value xsi:type="miniJava:IntConstant" value="1"/>
+        </statements>
+        <statements xsi:type="miniJava:ForStatement">
+          <declaration>
+            <assignee xsi:type="miniJava:VariableDeclaration" name="i">
+              <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+            </assignee>
+            <value xsi:type="miniJava:IntConstant"/>
+          </declaration>
+          <condition xsi:type="miniJava:Inferior">
+            <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.1/@body/@statements.1/@declaration/@assignee"/>
+            <right xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.1/@params.0"/>
+          </condition>
+          <progression>
+            <assignee xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.1/@body/@statements.1/@declaration/@assignee"/>
+            <value xsi:type="miniJava:Plus">
+              <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.1/@body/@statements.1/@declaration/@assignee"/>
+              <right xsi:type="miniJava:IntConstant" value="1"/>
+            </value>
+          </progression>
+          <block>
+            <statements xsi:type="miniJava:Assignment">
+              <assignee xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.1/@body/@statements.0/@assignee"/>
+              <value xsi:type="miniJava:Multiplication">
+                <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.1/@body/@statements.0/@assignee"/>
+                <right xsi:type="miniJava:IntConstant" value="2"/>
+              </value>
+            </statements>
+          </block>
+        </statements>
+        <statements xsi:type="miniJava:Return">
+          <expression xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.1/@body/@statements.0/@assignee"/>
+        </statements>
+      </body>
+    </members>
+    <members xsi:type="miniJava:Method" name="max" access="public" isstatic="true">
+      <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+      <params name="a">
+        <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+      </params>
+      <params name="b">
+        <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+      </params>
+      <body>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="ret">
+            <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+          </assignee>
+          <value xsi:type="miniJava:IntConstant"/>
+        </statements>
+        <statements xsi:type="miniJava:IfStatement">
+          <expression xsi:type="miniJava:Superior">
+            <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.2/@params.0"/>
+            <right xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.2/@params.1"/>
+          </expression>
+          <thenBlock>
+            <statements xsi:type="miniJava:Assignment">
+              <assignee xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.2/@body/@statements.0/@assignee"/>
+              <value xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.2/@params.0"/>
+            </statements>
+          </thenBlock>
+          <elseBlock>
+            <statements xsi:type="miniJava:Assignment">
+              <assignee xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.2/@body/@statements.0/@assignee"/>
+              <value xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.2/@params.1"/>
+            </statements>
+          </elseBlock>
+        </statements>
+        <statements xsi:type="miniJava:Return">
+          <expression xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.2/@body/@statements.0/@assignee"/>
+        </statements>
+      </body>
+    </members>
+    <members xsi:type="miniJava:Method" name="runBenchmark" isstatic="true">
+      <typeRef xsi:type="miniJava:VoidTypeRef"/>
+      <params name="n">
+        <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+      </params>
+      <body>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="minimumDepth">
+            <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+          </assignee>
+          <value xsi:type="miniJava:IntConstant" value="4"/>
+        </statements>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="maximumDepth">
+            <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+          </assignee>
+          <value xsi:type="miniJava:MethodCall" method="//@classes.1/@members.2">
+            <receiver xsi:type="miniJava:This"/>
+            <args xsi:type="miniJava:Plus">
+              <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.0/@assignee"/>
+              <right xsi:type="miniJava:IntConstant" value="2"/>
+            </args>
+            <args xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@params.0"/>
+          </value>
+        </statements>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="stretchDepth">
+            <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+          </assignee>
+          <value xsi:type="miniJava:Plus">
+            <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.1/@assignee"/>
+            <right xsi:type="miniJava:IntConstant" value="1"/>
+          </value>
+        </statements>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="inst">
+            <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+          </assignee>
+          <value xsi:type="miniJava:NewObject" type="//@classes.0"/>
+        </statements>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="node">
+            <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+          </assignee>
+          <value xsi:type="miniJava:MethodCall" method="//@classes.0/@members.3">
+            <receiver xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.3/@assignee"/>
+            <args xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.2/@assignee"/>
+          </value>
+        </statements>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="checkNode">
+            <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+          </assignee>
+          <value xsi:type="miniJava:MethodCall" method="//@classes.0/@members.5">
+            <receiver xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.4/@assignee"/>
+          </value>
+        </statements>
+        <statements xsi:type="miniJava:PrintStatement">
+          <expression xsi:type="miniJava:Plus">
+            <left xsi:type="miniJava:Plus">
+              <left xsi:type="miniJava:Plus">
+                <left xsi:type="miniJava:StringConstant" value="stretch tree of depth "/>
+                <right xsi:type="miniJava:Plus">
+                  <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.1/@assignee"/>
+                  <right xsi:type="miniJava:IntConstant" value="1"/>
+                </right>
+              </left>
+              <right xsi:type="miniJava:StringConstant" value="&#x9; check: "/>
+            </left>
+            <right xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.5/@assignee"/>
+          </expression>
+        </statements>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="longLivedTree">
+            <typeRef xsi:type="miniJava:ClassRef" referencedClass="//@classes.0"/>
+          </assignee>
+          <value xsi:type="miniJava:MethodCall" method="//@classes.0/@members.3">
+            <receiver xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.3/@assignee"/>
+            <args xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.1/@assignee"/>
+          </value>
+        </statements>
+        <statements xsi:type="miniJava:ForStatement">
+          <declaration>
+            <assignee xsi:type="miniJava:VariableDeclaration" name="depth">
+              <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+            </assignee>
+            <value xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.0/@assignee"/>
+          </declaration>
+          <condition xsi:type="miniJava:InferiorOrEqual">
+            <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@declaration/@assignee"/>
+            <right xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.1/@assignee"/>
+          </condition>
+          <progression>
+            <assignee xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@declaration/@assignee"/>
+            <value xsi:type="miniJava:Plus">
+              <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@declaration/@assignee"/>
+              <right xsi:type="miniJava:IntConstant" value="2"/>
+            </value>
+          </progression>
+          <block>
+            <statements xsi:type="miniJava:Assignment">
+              <assignee xsi:type="miniJava:VariableDeclaration" name="iterations">
+                <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+              </assignee>
+              <value xsi:type="miniJava:MethodCall" method="//@classes.1/@members.1">
+                <receiver xsi:type="miniJava:This"/>
+                <args xsi:type="miniJava:Plus">
+                  <left xsi:type="miniJava:Minus">
+                    <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.1/@assignee"/>
+                    <right xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@declaration/@assignee"/>
+                  </left>
+                  <right xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.0/@assignee"/>
+                </args>
+              </value>
+            </statements>
+            <statements xsi:type="miniJava:Assignment">
+              <assignee xsi:type="miniJava:VariableDeclaration" name="check">
+                <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+              </assignee>
+              <value xsi:type="miniJava:IntConstant"/>
+            </statements>
+            <statements xsi:type="miniJava:ForStatement">
+              <declaration>
+                <assignee xsi:type="miniJava:VariableDeclaration" name="i">
+                  <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+                </assignee>
+                <value xsi:type="miniJava:IntConstant" value="1"/>
+              </declaration>
+              <condition xsi:type="miniJava:InferiorOrEqual">
+                <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@block/@statements.2/@declaration/@assignee"/>
+                <right xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@block/@statements.0/@assignee"/>
+              </condition>
+              <progression>
+                <assignee xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@block/@statements.2/@declaration/@assignee"/>
+                <value xsi:type="miniJava:Plus">
+                  <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@block/@statements.2/@declaration/@assignee"/>
+                  <right xsi:type="miniJava:IntConstant" value="1"/>
+                </value>
+              </progression>
+              <block>
+                <statements xsi:type="miniJava:Assignment">
+                  <assignee xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@block/@statements.1/@assignee"/>
+                  <value xsi:type="miniJava:Plus">
+                    <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@block/@statements.1/@assignee"/>
+                    <right xsi:type="miniJava:MethodCall" method="//@classes.0/@members.5">
+                      <receiver xsi:type="miniJava:MethodCall" method="//@classes.0/@members.3">
+                        <receiver xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.3/@assignee"/>
+                        <args xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@declaration/@assignee"/>
+                      </receiver>
+                    </right>
+                  </value>
+                </statements>
+              </block>
+            </statements>
+            <statements xsi:type="miniJava:PrintStatement">
+              <expression xsi:type="miniJava:Plus">
+                <left xsi:type="miniJava:Plus">
+                  <left xsi:type="miniJava:Plus">
+                    <left xsi:type="miniJava:Plus">
+                      <left xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@block/@statements.0/@assignee"/>
+                      <right xsi:type="miniJava:StringConstant" value="&#x9; trees of depth "/>
+                    </left>
+                    <right xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@declaration/@assignee"/>
+                  </left>
+                  <right xsi:type="miniJava:StringConstant" value="&#x9; check: "/>
+                </left>
+                <right xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.8/@block/@statements.1/@assignee"/>
+              </expression>
+            </statements>
+          </block>
+        </statements>
+        <statements xsi:type="miniJava:PrintStatement">
+          <expression xsi:type="miniJava:Plus">
+            <left xsi:type="miniJava:Plus">
+              <left xsi:type="miniJava:Plus">
+                <left xsi:type="miniJava:StringConstant" value="long lived tree of depth "/>
+                <right xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.1/@assignee"/>
+              </left>
+              <right xsi:type="miniJava:StringConstant" value="&#x9; check: "/>
+            </left>
+            <right xsi:type="miniJava:MethodCall" method="//@classes.0/@members.5">
+              <receiver xsi:type="miniJava:SymbolRef" symbol="//@classes.1/@members.3/@body/@statements.7/@assignee"/>
+            </right>
+          </expression>
+        </statements>
+      </body>
+    </members>
+  </classes>
+</miniJava:Program>

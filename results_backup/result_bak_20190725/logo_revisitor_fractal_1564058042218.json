@@ -1,0 +1,56 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "fr.mleduc.logo.LogoRevisitorBenchmark.logoInterpreter",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java",
+        "jvmArgs" : [
+            "-Xms4G",
+            "-Xmx4G"
+        ],
+        "jdkVersion" : "1.8.0_221",
+        "vmName" : "Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1",
+        "vmVersion" : "25.221-b11-jvmci-19.1-b01",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "program" : "/home/benchmarks/programs/logo_fractal.xmi"
+        },
+        "primaryMetric" : {
+            "score" : 5.505094417,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 5.505094417,
+                "50.0" : 5.505094417,
+                "90.0" : 5.505094417,
+                "95.0" : 5.505094417,
+                "99.0" : 5.505094417,
+                "99.9" : 5.505094417,
+                "99.99" : 5.505094417,
+                "99.999" : 5.505094417,
+                "99.9999" : 5.505094417,
+                "100.0" : 5.505094417
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    5.505094417
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

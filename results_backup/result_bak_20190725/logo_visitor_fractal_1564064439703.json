@@ -1,0 +1,56 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "fr.mleduc.logo.LogoVisitorBenchmark.logoInterpreter",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/benchmarks/jvms/hotspot-8u222-b10/jre/bin/java",
+        "jvmArgs" : [
+            "-Xms4G",
+            "-Xmx4G"
+        ],
+        "jdkVersion" : "1.8.0_222",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.222-b10",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "program" : "/home/benchmarks/programs/logo_fractal.xmi"
+        },
+        "primaryMetric" : {
+            "score" : 12.254066168,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 12.254066168,
+                "50.0" : 12.254066168,
+                "90.0" : 12.254066168,
+                "95.0" : 12.254066168,
+                "99.0" : 12.254066168,
+                "99.9" : 12.254066168,
+                "99.99" : 12.254066168,
+                "99.999" : 12.254066168,
+                "99.9999" : 12.254066168,
+                "100.0" : 12.254066168
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    12.254066168
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

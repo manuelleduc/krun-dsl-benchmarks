@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ASCII"?>
+<miniJava:Program xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:miniJava="http://miniJava.miniJava.miniJava/">
+  <classes xsi:type="miniJava:Clazz" name="Fib">
+    <members xsi:type="miniJava:Method" name="main" access="public" isstatic="true">
+      <typeRef xsi:type="miniJava:VoidTypeRef"/>
+      <params name="args">
+        <typeRef xsi:type="miniJava:ArrayTypeRef">
+          <typeRef xsi:type="miniJava:StringTypeRef"/>
+        </typeRef>
+      </params>
+      <body>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="n">
+            <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+          </assignee>
+          <value xsi:type="miniJava:IntConstant" value="30"/>
+        </statements>
+        <statements xsi:type="miniJava:PrintStatement">
+          <expression xsi:type="miniJava:MethodCall" method="//@classes.0/@members.1">
+            <receiver xsi:type="miniJava:NewObject" type="//@classes.0"/>
+            <args xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.0/@body/@statements.0/@assignee"/>
+          </expression>
+        </statements>
+      </body>
+    </members>
+    <members xsi:type="miniJava:Method" name="fib">
+      <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+      <params name="n">
+        <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+      </params>
+      <body>
+        <statements xsi:type="miniJava:Assignment">
+          <assignee xsi:type="miniJava:VariableDeclaration" name="ret">
+            <typeRef xsi:type="miniJava:IntegerTypeRef"/>
+          </assignee>
+          <value xsi:type="miniJava:IntConstant" value="1"/>
+        </statements>
+        <statements xsi:type="miniJava:IfStatement">
+          <expression xsi:type="miniJava:Superior">
+            <left xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.1/@params.0"/>
+            <right xsi:type="miniJava:IntConstant" value="2"/>
+          </expression>
+          <thenBlock>
+            <statements xsi:type="miniJava:Assignment">
+              <assignee xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.1/@body/@statements.0/@assignee"/>
+              <value xsi:type="miniJava:Plus">
+                <left xsi:type="miniJava:MethodCall" method="//@classes.0/@members.1">
+                  <receiver xsi:type="miniJava:This"/>
+                  <args xsi:type="miniJava:Minus">
+                    <left xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.1/@params.0"/>
+                    <right xsi:type="miniJava:IntConstant" value="1"/>
+                  </args>
+                </left>
+                <right xsi:type="miniJava:MethodCall" method="//@classes.0/@members.1">
+                  <receiver xsi:type="miniJava:This"/>
+                  <args xsi:type="miniJava:Minus">
+                    <left xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.1/@params.0"/>
+                    <right xsi:type="miniJava:IntConstant" value="2"/>
+                  </args>
+                </right>
+              </value>
+            </statements>
+          </thenBlock>
+        </statements>
+        <statements xsi:type="miniJava:Return">
+          <expression xsi:type="miniJava:SymbolRef" symbol="//@classes.0/@members.1/@body/@statements.0/@assignee"/>
+        </statements>
+      </body>
+    </members>
+  </classes>
+</miniJava:Program>

@@ -1,0 +1,56 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "fr.mleduc.boa.BoaInterpreterBenchmark.boaInterpreter",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/benchmarks/jvms/hotspot_12.0.2/bin/java",
+        "jvmArgs" : [
+            "-Xms4G",
+            "-Xmx4G"
+        ],
+        "jdkVersion" : "12.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "12.0.2+10",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 1,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "program" : "/home/benchmarks/programs/boa_fibonacci.xmi"
+        },
+        "primaryMetric" : {
+            "score" : 1.934863272,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1.934863272,
+                "50.0" : 1.934863272,
+                "90.0" : 1.934863272,
+                "95.0" : 1.934863272,
+                "99.0" : 1.934863272,
+                "99.9" : 1.934863272,
+                "99.99" : 1.934863272,
+                "99.999" : 1.934863272,
+                "99.9999" : 1.934863272,
+                "100.0" : 1.934863272
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    1.934863272
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

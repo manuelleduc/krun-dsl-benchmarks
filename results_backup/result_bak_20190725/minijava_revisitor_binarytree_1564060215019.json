@@ -1,0 +1,45 @@
+[
+    {
+        "benchmark" : "fr.mleduc.minijava.MinijavaRevisitorBenchmark.logoInterpreter",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "measurementIterations" : 1,
+        "measurementTime" : "1 s",
+        "params" : {
+            "program" : "/home/benchmarks/programs/minijava_binarytree.xmi"
+        },
+        "primaryMetric" : {
+            "score" : 6.566467875,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 6.566467875,
+                "50.0" : 6.566467875,
+                "90.0" : 6.566467875,
+                "95.0" : 6.566467875,
+                "99.0" : 6.566467875,
+                "99.9" : 6.566467875,
+                "99.99" : 6.566467875,
+                "99.999" : 6.566467875,
+                "99.9999" : 6.566467875,
+                "100.0" : 6.566467875
+            },
+            "scoreUnit" : "s",
+            "rawData" : [
+                [
+                    6.566467875
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

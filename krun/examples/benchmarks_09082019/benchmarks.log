@@ -1,0 +1,2093 @@
+[2019-08-08 11:14:17: INFO] Wait 1 secs to allow system to cool prior to collecting initial temperature readings
+[2019-08-08 11:14:18: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 11:14:50: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_sort.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_sort.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_sort.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_sort.xmi, 2, 178)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getPackageForURI(XMLHandler.java:2643)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getFactoryForPrefix(XMLHandler.java:2476)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1353)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1522)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1044)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:78)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:720)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.startElement(XMIHandler.java:190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1289)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 24 more
+Caused by: Attached Guest Language Frames (0)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_sort_graalvm-ce-19.1.1_1565255689622.json
+{"wallclock_times": [0.6872677349892911], "core_cycle_counts": [[1137374780], [857163420], [684290070], [1950728168]], "aperf_counts": [[1135522352], [851247585], [680858509], [1950092482]], "mperf_counts": [[1135522520], [851247176], [680858080], [1950092576]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 11:14:50: INFO] Finished 'minijava_truffle_sort(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-08 11:14:50: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 11:14:50: INFO] 15 executions left in scheduler queue
+[2019-08-08 11:14:50: INFO] Next execution is 'minijava_truffle_binarytree(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-08 11:14:50: INFO] Estimated completion (next execution): 2019-08-08 11:15:21 (0:00:30 from now)
+[2019-08-08 11:14:50: INFO] Reboot in preparation for next execution
+[2019-08-08 11:14:50: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 11:15:24: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_binarytree.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_binarytree.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_binarytree.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_binarytree.xmi, 2, 178)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getPackageForURI(XMLHandler.java:2643)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getFactoryForPrefix(XMLHandler.java:2476)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1353)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1522)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1044)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:78)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:720)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.startElement(XMIHandler.java:190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1289)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 24 more
+Caused by: Attached Guest Language Frames (0)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_binarytree_graalvm-ce-19.1.1_1565255723439.json
+{"wallclock_times": [0.6858875679899938], "core_cycle_counts": [[914715290], [1778046127], [900986490], [1010108798]], "aperf_counts": [[912241746], [1776715880], [898372207], [1004828004]], "mperf_counts": [[912241800], [1776715924], [898372120], [1004827784]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 11:15:24: WARNING] Mail quota reached.
+[2019-08-08 11:15:24: INFO] Finished 'minijava_truffle_binarytree(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-08 11:15:24: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 11:15:24: INFO] 14 executions left in scheduler queue
+[2019-08-08 11:15:24: INFO] Next execution is 'minijava_truffle_fannkuchredux(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-08 11:15:24: INFO] Estimated completion (next execution): 2019-08-08 11:15:55 (0:00:30 from now)
+[2019-08-08 11:15:24: INFO] Reboot in preparation for next execution
+[2019-08-08 11:15:24: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 11:15:57: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_fannkuchredux.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_fannkuchredux.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_fannkuchredux.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_fannkuchredux.xmi, 2, 178)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getPackageForURI(XMLHandler.java:2643)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getFactoryForPrefix(XMLHandler.java:2476)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1353)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1522)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1044)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:78)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:720)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.startElement(XMIHandler.java:190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1289)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 24 more
+Caused by: Attached Guest Language Frames (0)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_fannkuchredux_graalvm-ce-19.1.1_1565255757256.json
+{"wallclock_times": [0.6905851619958412], "core_cycle_counts": [[892962365], [913913431], [922123144], [1871375658]], "aperf_counts": [[888621037], [910831628], [919551219], [1870382781]], "mperf_counts": [[888620920], [910831364], [919551056], [1870382896]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 11:15:57: INFO] Finished 'minijava_truffle_fannkuchredux(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-08 11:15:58: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 11:15:58: INFO] 13 executions left in scheduler queue
+[2019-08-08 11:15:58: INFO] Next execution is 'minijava_truffle_fibonacci(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-08 11:15:58: INFO] Estimated completion (next execution): 2019-08-08 11:16:29 (0:00:30 from now)
+[2019-08-08 11:15:58: INFO] Reboot in preparation for next execution
+[2019-08-08 11:15:58: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 11:16:31: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_fibonacci.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_fibonacci.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_fibonacci.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_fibonacci.xmi, 2, 178)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getPackageForURI(XMLHandler.java:2643)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getFactoryForPrefix(XMLHandler.java:2476)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1353)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1522)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1044)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:78)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:720)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.startElement(XMIHandler.java:190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1289)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 24 more
+Caused by: Attached Guest Language Frames (0)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_fibonacci_graalvm-ce-19.1.1_1565255791056.json
+{"wallclock_times": [0.6778231299831532], "core_cycle_counts": [[1182936939], [906484705], [1734023127], [738745584]], "aperf_counts": [[1181102703], [900716471], [1732868129], [735564939]], "mperf_counts": [[1181287336], [900904790], [1733678808], [736221146]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 11:16:31: INFO] Finished 'minijava_truffle_fibonacci(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-08 11:16:32: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 11:16:32: INFO] 12 executions left in scheduler queue
+[2019-08-08 11:16:32: INFO] Next execution is 'minijava_truffle_sort(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-08 11:16:32: INFO] Estimated completion (next execution): 2019-08-08 11:17:02 (0:00:30 from now)
+[2019-08-08 11:16:32: INFO] Reboot in preparation for next execution
+[2019-08-08 11:16:32: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 11:17:04: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_sort.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_sort.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_sort.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_sort.xmi, 2, 178)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getPackageForURI(XMLHandler.java:2643)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getFactoryForPrefix(XMLHandler.java:2476)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1353)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1522)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1044)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:78)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:720)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.startElement(XMIHandler.java:190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1289)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 24 more
+Caused by: Attached Guest Language Frames (0)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_sort_graalvm-ee-19.1.1_1565255823841.json
+{"wallclock_times": [0.6987899439991452], "core_cycle_counts": [[1770542420], [1158163342], [735311257], [903594205]], "aperf_counts": [[1769550424], [1155367143], [731214761], [898696367]], "mperf_counts": [[1770021826], [1155366936], [731214280], [898696144]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 11:17:04: INFO] Finished 'minijava_truffle_sort(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-08 11:17:04: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 11:17:04: INFO] 11 executions left in scheduler queue
+[2019-08-08 11:17:04: INFO] Next execution is 'minijava_truffle_binarytree(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-08 11:17:04: INFO] Estimated completion (next execution): 2019-08-08 11:17:35 (0:00:30 from now)
+[2019-08-08 11:17:04: INFO] Reboot in preparation for next execution
+[2019-08-08 11:17:04: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 11:17:37: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_binarytree.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_binarytree.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_binarytree.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_binarytree.xmi, 2, 178)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getPackageForURI(XMLHandler.java:2643)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getFactoryForPrefix(XMLHandler.java:2476)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1353)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1522)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1044)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:78)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:720)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.startElement(XMIHandler.java:190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1289)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 24 more
+Caused by: Attached Guest Language Frames (0)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_binarytree_graalvm-ee-19.1.1_1565255856644.json
+{"wallclock_times": [0.7037234669842292], "core_cycle_counts": [[1863930087], [1075930085], [977590679], [774299387]], "aperf_counts": [[1863137044], [1073254218], [971609641], [770302030]], "mperf_counts": [[1863521702], [1073387454], [971824502], [770301612]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 11:17:37: INFO] Finished 'minijava_truffle_binarytree(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-08 11:17:37: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 11:17:37: INFO] 10 executions left in scheduler queue
+[2019-08-08 11:17:37: INFO] Next execution is 'minijava_truffle_fannkuchredux(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-08 11:17:37: INFO] Estimated completion (next execution): 2019-08-08 11:18:08 (0:00:30 from now)
+[2019-08-08 11:17:37: INFO] Reboot in preparation for next execution
+[2019-08-08 11:17:37: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 11:18:10: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_fannkuchredux.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_fannkuchredux.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_fannkuchredux.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_fannkuchredux.xmi, 2, 178)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getPackageForURI(XMLHandler.java:2643)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getFactoryForPrefix(XMLHandler.java:2476)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1353)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1522)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1044)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:78)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:720)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.startElement(XMIHandler.java:190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1289)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 24 more
+Caused by: Attached Guest Language Frames (0)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_fannkuchredux_graalvm-ee-19.1.1_1565255889452.json
+{"wallclock_times": [0.6960576309938915], "core_cycle_counts": [[874359613], [1044081079], [1140118336], [1587817826]], "aperf_counts": [[871275098], [1039385634], [1136949423], [1585963163]], "mperf_counts": [[871275060], [1039385288], [1136967842], [1585962996]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 11:18:10: INFO] Finished 'minijava_truffle_fannkuchredux(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-08 11:18:10: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 11:18:10: INFO] 9 executions left in scheduler queue
+[2019-08-08 11:18:10: INFO] Next execution is 'minijava_truffle_fibonacci(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-08 11:18:10: INFO] Estimated completion (next execution): 2019-08-08 11:18:41 (0:00:30 from now)
+[2019-08-08 11:18:10: INFO] Reboot in preparation for next execution
+[2019-08-08 11:18:10: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 11:18:43: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_fibonacci.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_fibonacci.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_fibonacci.xmi, 2, 178)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://miniJava.miniJava.miniJava/' not found. (file:/home/benchmarks/programs/minijava_fibonacci.xmi, 2, 178)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getPackageForURI(XMLHandler.java:2643)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getFactoryForPrefix(XMLHandler.java:2476)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1353)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1522)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1044)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:78)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:720)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.startElement(XMIHandler.java:190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1289)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 24 more
+Caused by: Attached Guest Language Frames (0)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_fibonacci_graalvm-ee-19.1.1_1565255923261.json
+{"wallclock_times": [0.6865117219858803], "core_cycle_counts": [[969080060], [1807997488], [871201881], [964901013]], "aperf_counts": [[967042632], [1806927820], [868648609], [959296967]], "mperf_counts": [[967042620], [1806927876], [868648660], [959296568]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 11:18:43: INFO] Finished 'minijava_truffle_fibonacci(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-08 11:18:44: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 11:18:44: INFO] 8 executions left in scheduler queue
+[2019-08-08 11:18:44: INFO] Next execution is 'fsm_truffle_buffers(50)' (default-java variant) under 'fsm_truffle_graalvm-ee-19.1.1'
+[2019-08-08 11:18:44: INFO] Estimated completion (next execution): 2019-08-08 11:19:15 (0:00:30 from now)
+[2019-08-08 11:18:44: INFO] Reboot in preparation for next execution
+[2019-08-08 11:18:44: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 11:19:15: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/fsm_buffers.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://www.example.org/fsm' not found. (file:/home/benchmarks/programs/fsm_buffers.xmi, 6, 60)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://www.example.org/fsm' not found. (file:/home/benchmarks/programs/fsm_buffers.xmi, 6, 60)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://www.example.org/fsm' not found. (file:/home/benchmarks/programs/fsm_buffers.xmi, 6, 60)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getPackageForURI(XMLHandler.java:2643)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getFactoryForPrefix(XMLHandler.java:2476)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1353)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1522)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1044)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:78)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:720)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.startElement(XMIHandler.java:190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1289)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 24 more
+Caused by: Attached Guest Language Frames (0)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/fsm_truffle_buffers_graalvm-ee-19.1.1_1565255955056.json
+{"wallclock_times": [0.680787715013139], "core_cycle_counts": [[1002703353], [854263462], [1745077086], [971727464]], "aperf_counts": [[998341681], [851119895], [1743374536], [968611199]], "mperf_counts": [[998341520], [851119644], [1743374628], [968610940]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 11:19:15: INFO] Finished 'fsm_truffle_buffers(50)' (default-java variant) under 'fsm_truffle_graalvm-ee-19.1.1'
+[2019-08-08 11:19:16: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 11:19:16: INFO] 7 executions left in scheduler queue
+[2019-08-08 11:19:16: INFO] Next execution is 'fsm_truffle_buffers(50)' (default-java variant) under 'fsm_truffle_graalvm-ce-19.1.1'
+[2019-08-08 11:19:16: INFO] Estimated completion (next execution): 2019-08-08 11:19:46 (0:00:30 from now)
+[2019-08-08 11:19:16: INFO] Reboot in preparation for next execution
+[2019-08-08 11:19:16: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 11:19:48: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/fsm_buffers.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://www.example.org/fsm' not found. (file:/home/benchmarks/programs/fsm_buffers.xmi, 6, 60)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://www.example.org/fsm' not found. (file:/home/benchmarks/programs/fsm_buffers.xmi, 6, 60)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://www.example.org/fsm' not found. (file:/home/benchmarks/programs/fsm_buffers.xmi, 6, 60)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getPackageForURI(XMLHandler.java:2643)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getFactoryForPrefix(XMLHandler.java:2476)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1353)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1522)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1044)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:78)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:720)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.startElement(XMIHandler.java:190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1289)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 24 more
+Caused by: Attached Guest Language Frames (0)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/fsm_truffle_buffers_graalvm-ce-19.1.1_1565255987868.json
+{"wallclock_times": [0.6745935670041945], "core_cycle_counts": [[1143442062], [1698080572], [977978240], [729590441]], "aperf_counts": [[1139487334], [1696127467], [975055208], [726730733]], "mperf_counts": [[1139487152], [1696127508], [975055036], [726730708]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 11:19:48: INFO] Finished 'fsm_truffle_buffers(50)' (default-java variant) under 'fsm_truffle_graalvm-ce-19.1.1'
+[2019-08-08 11:19:48: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 11:19:48: INFO] 6 executions left in scheduler queue
+[2019-08-08 11:19:48: INFO] Next execution is 'logo_truffle_fractal(50)' (default-java variant) under 'logo_truffle_graalvm-ee-19.1.1'
+[2019-08-08 11:19:48: INFO] Estimated completion (next execution): 2019-08-08 11:20:19 (0:00:30 from now)
+[2019-08-08 11:19:48: INFO] Reboot in preparation for next execution
+[2019-08-08 11:19:48: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 11:20:21: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/logo_fractal.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://kmLogo' not found. (file:/home/benchmarks/programs/logo_fractal.xmi, 6, 34)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://kmLogo' not found. (file:/home/benchmarks/programs/logo_fractal.xmi, 6, 34)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://kmLogo' not found. (file:/home/benchmarks/programs/logo_fractal.xmi, 6, 34)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getPackageForURI(XMLHandler.java:2643)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getFactoryForPrefix(XMLHandler.java:2476)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1353)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1522)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1044)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:78)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:720)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.startElement(XMIHandler.java:190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1289)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 24 more
+Caused by: Attached Guest Language Frames (0)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/logo_truffle_fractal_graalvm-ee-19.1.1_1565256020659.json
+{"wallclock_times": [0.6920958990231156], "core_cycle_counts": [[878486859], [1049882183], [1027101812], [1672711374]], "aperf_counts": [[874567581], [1047490904], [1022893887], [1671075964]], "mperf_counts": [[874583416], [1047494432], [1022893624], [1671543240]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 11:20:21: INFO] Finished 'logo_truffle_fractal(50)' (default-java variant) under 'logo_truffle_graalvm-ee-19.1.1'
+[2019-08-08 11:20:21: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 11:20:21: INFO] 5 executions left in scheduler queue
+[2019-08-08 11:20:21: INFO] Next execution is 'logo_truffle_fractal(50)' (default-java variant) under 'logo_truffle_graalvm-ce-19.1.1'
+[2019-08-08 11:20:21: INFO] Estimated completion (next execution): 2019-08-08 11:20:52 (0:00:30 from now)
+[2019-08-08 11:20:21: INFO] Reboot in preparation for next execution
+[2019-08-08 11:20:21: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 11:20:54: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/logo_fractal.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://kmLogo' not found. (file:/home/benchmarks/programs/logo_fractal.xmi, 6, 34)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://kmLogo' not found. (file:/home/benchmarks/programs/logo_fractal.xmi, 6, 34)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at interpreter.boa.interpreter.boa.language.TrufflebenchLanguage.parse(TrufflebenchLanguage.java:49)
+	at com.oracle.truffle.api.TruffleLanguage$ParsingRequest.parse(TruffleLanguage.java:788)
+	at com.oracle.truffle.api.TruffleLanguage.parse(TruffleLanguage.java:1199)
+	at com.oracle.truffle.api.TruffleLanguage$LanguageImpl.parse(TruffleLanguage.java:2584)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseImpl(PolyglotSourceCache.java:92)
+	at com.oracle.truffle.polyglot.PolyglotSourceCache.parseCached(PolyglotSourceCache.java:73)
+	at com.oracle.truffle.polyglot.PolyglotLanguageContext.parseCached(PolyglotLanguageContext.java:268)
+	at com.oracle.truffle.polyglot.PolyglotContextImpl.eval(PolyglotContextImpl.java:799)
+	at org.graalvm.polyglot.Context.eval(Context.java:342)
+	at lang.truffle.benchmark.MyBenchmark.loadProgram(MyBenchmark.java:55)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_Throughput(MyBenchmark_testMethod_jmhTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'http://kmLogo' not found. (file:/home/benchmarks/programs/logo_fractal.xmi, 6, 34)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getPackageForURI(XMLHandler.java:2643)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.getFactoryForPrefix(XMLHandler.java:2476)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1353)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1522)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1044)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:78)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:720)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.startElement(XMIHandler.java:190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:745)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1359)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1289)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 24 more
+Caused by: Attached Guest Language Frames (0)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/logo_truffle_fractal_graalvm-ce-19.1.1_1565256053472.json
+{"wallclock_times": [0.682396500982577], "core_cycle_counts": [[982219420], [882818427], [1822759756], [897015101]], "aperf_counts": [[980029599], [877382406], [1821441641], [893923867]], "mperf_counts": [[980029600], [877382120], [1821441644], [893923920]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 11:20:54: INFO] Finished 'logo_truffle_fractal(50)' (default-java variant) under 'logo_truffle_graalvm-ce-19.1.1'
+[2019-08-08 11:20:54: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 11:20:54: INFO] 4 executions left in scheduler queue
+[2019-08-08 11:20:54: INFO] Next execution is 'boa_truffle_fibonacci(50)' (default-java variant) under 'boa_truffle_graalvm-ce-19.1.1'
+[2019-08-08 11:20:54: INFO] Estimated completion (next execution): 2019-08-08 11:21:25 (0:00:30 from now)
+[2019-08-08 11:20:54: INFO] Reboot in preparation for next execution
+[2019-08-08 11:20:54: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 14:26:10: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/boa_fibonacci.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: 0.929 ops/s
+Iteration   2: 0.690 ops/s
+Iteration   3: 0.679 ops/s
+Iteration   4: 0.678 ops/s
+Iteration   5: 0.678 ops/s
+Iteration   6: 0.678 ops/s
+Iteration   7: 0.675 ops/s
+Iteration   8: 0.678 ops/s
+Iteration   9: 0.678 ops/s
+Iteration  10: 0.680 ops/s
+Iteration  11: 0.677 ops/s
+Iteration  12: 0.679 ops/s
+Iteration  13: 0.677 ops/s
+Iteration  14: 0.678 ops/s
+Iteration  15: 0.678 ops/s
+Iteration  16: 0.678 ops/s
+Iteration  17: 0.677 ops/s
+Iteration  18: 0.676 ops/s
+Iteration  19: 0.678 ops/s
+Iteration  20: 0.677 ops/s
+Iteration  21: 0.678 ops/s
+Iteration  22: 0.677 ops/s
+Iteration  23: 0.676 ops/s
+Iteration  24: 0.677 ops/s
+Iteration  25: 0.676 ops/s
+Iteration  26: 0.678 ops/s
+Iteration  27: 0.677 ops/s
+Iteration  28: 0.678 ops/s
+Iteration  29: 0.678 ops/s
+Iteration  30: 0.678 ops/s
+Iteration  31: 0.676 ops/s
+Iteration  32: 0.678 ops/s
+Iteration  33: 0.676 ops/s
+Iteration  34: 0.678 ops/s
+Iteration  35: 0.678 ops/s
+Iteration  36: 0.678 ops/s
+Iteration  37: 0.676 ops/s
+Iteration  38: 0.677 ops/s
+Iteration  39: 0.678 ops/s
+Iteration  40: 0.677 ops/s
+Iteration  41: 0.678 ops/s
+Iteration  42: 0.678 ops/s
+Iteration  43: 0.676 ops/s
+Iteration  44: 0.675 ops/s
+Iteration  45: 0.678 ops/s
+Iteration  46: 0.678 ops/s
+Iteration  47: 0.678 ops/s
+Iteration  48: 0.678 ops/s
+Iteration  49: 0.678 ops/s
+Iteration  50: 0.677 ops/s
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  0.683 ?(99.9%) 0.018 ops/s [Average]
+  (min, avg, max) = (0.675, 0.683, 0.929), stdev = 0.036
+  CI (99.9%): [0.665, 0.700] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:08:37
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                 (program)   Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/boa_fibonacci.xmi  thrpt   50  0.683 ? 0.018  ops/s
+
+Benchmark result is saved to /home/benchmarks/results/boa_truffle_fibonacci_graalvm-ce-19.1.1_1565266652640.json
+{"wallclock_times": [517.9287275099999], "core_cycle_counts": [[548538851279], [365417014107], [425964265940], [327557163755]], "aperf_counts": [[547448192725], [365292715335], [425917680290], [327509644983]], "mperf_counts": [[547459893966], [365292972570], [425925888270], [327522324838]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 14:26:10: INFO] Finished 'boa_truffle_fibonacci(50)' (default-java variant) under 'boa_truffle_graalvm-ce-19.1.1'
+[2019-08-08 14:26:10: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 14:26:10: INFO] 3 executions left in scheduler queue
+[2019-08-08 14:26:10: INFO] Next execution is 'boa_truffle_sort(50)' (default-java variant) under 'boa_truffle_graalvm-ce-19.1.1'
+[2019-08-08 14:26:10: INFO] Estimated completion (next execution): 2019-08-08 14:37:19 (0:11:08 from now)
+[2019-08-08 14:26:10: INFO] Reboot in preparation for next execution
+[2019-08-08 15:36:24: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/boa/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/boa_sort.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: 0.719 ops/s
+Iteration   2: 0.638 ops/s
+Iteration   3: 0.631 ops/s
+Iteration   4: 0.628 ops/s
+Iteration   5: 0.632 ops/s
+Iteration   6: 0.632 ops/s
+Iteration   7: 0.631 ops/s
+Iteration   8: 0.630 ops/s
+Iteration   9: 0.629 ops/s
+Iteration  10: 0.630 ops/s
+Iteration  11: 0.632 ops/s
+Iteration  12: 0.626 ops/s
+Iteration  13: 0.631 ops/s
+Iteration  14: 0.632 ops/s
+Iteration  15: 0.630 ops/s
+Iteration  16: 0.631 ops/s
+Iteration  17: 0.630 ops/s
+Iteration  18: 0.629 ops/s
+Iteration  19: 0.627 ops/s
+Iteration  20: 0.629 ops/s
+Iteration  21: 0.626 ops/s
+Iteration  22: 0.630 ops/s
+Iteration  23: 0.629 ops/s
+Iteration  24: 0.629 ops/s
+Iteration  25: 0.630 ops/s
+Iteration  26: 0.628 ops/s
+Iteration  27: 0.628 ops/s
+Iteration  28: 0.628 ops/s
+Iteration  29: 0.631 ops/s
+Iteration  30: 0.626 ops/s
+Iteration  31: 0.631 ops/s
+Iteration  32: 0.629 ops/s
+Iteration  33: 0.630 ops/s
+Iteration  34: 0.627 ops/s
+Iteration  35: 0.628 ops/s
+Iteration  36: 0.627 ops/s
+Iteration  37: 0.627 ops/s
+Iteration  38: 0.629 ops/s
+Iteration  39: 0.631 ops/s
+Iteration  40: 0.629 ops/s
+Iteration  41: 0.625 ops/s
+Iteration  42: 0.631 ops/s
+Iteration  43: 0.627 ops/s
+Iteration  44: 0.628 ops/s
+Iteration  45: 0.624 ops/s
+Iteration  46: 0.633 ops/s
+Iteration  47: 0.626 ops/s
+Iteration  48: 0.630 ops/s
+Iteration  49: 0.628 ops/s
+Iteration  50: 0.627 ops/s
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  0.631 ?(99.9%) 0.006 ops/s [Average]
+  (min, avg, max) = (0.624, 0.631, 0.719), stdev = 0.013
+  CI (99.9%): [0.625, 0.637] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:09:17
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                            (program)   Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/boa_sort.xmi  thrpt   50  0.631 ? 0.006  ops/s
+
+Benchmark result is saved to /home/benchmarks/results/boa_truffle_sort_graalvm-ce-19.1.1_1565270827550.json
+{"wallclock_times": [557.3004361659996], "core_cycle_counts": [[508548869309], [386068134044], [540639835570], [378456514997]], "aperf_counts": [[506596168310], [385862994453], [540562938916], [378372917686]], "mperf_counts": [[506595643388], [385863063988], [540562986580], [378372965950]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 15:36:24: INFO] Finished 'boa_truffle_sort(50)' (default-java variant) under 'boa_truffle_graalvm-ce-19.1.1'
+[2019-08-08 15:36:25: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 15:36:25: INFO] 2 executions left in scheduler queue
+[2019-08-08 15:36:25: INFO] Next execution is 'boa_truffle_fibonacci(50)' (default-java variant) under 'boa_truffle_graalvm-ee-19.1.1'
+[2019-08-08 15:36:25: INFO] Estimated completion (next execution): 2019-08-08 15:46:12 (0:09:47 from now)
+[2019-08-08 15:36:25: INFO] Reboot in preparation for next execution
+[2019-08-08 15:36:25: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 15:45:49: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/boa/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/boa_fibonacci.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: 1.079 ops/s
+Iteration   2: 0.997 ops/s
+Iteration   3: 0.998 ops/s
+Iteration   4: 0.996 ops/s
+Iteration   5: 0.999 ops/s
+Iteration   6: 0.995 ops/s
+Iteration   7: 0.999 ops/s
+Iteration   8: 0.999 ops/s
+Iteration   9: 1.000 ops/s
+Iteration  10: 0.999 ops/s
+Iteration  11: 1.000 ops/s
+Iteration  12: 1.000 ops/s
+Iteration  13: 1.000 ops/s
+Iteration  14: 1.000 ops/s
+Iteration  15: 1.000 ops/s
+Iteration  16: 1.001 ops/s
+Iteration  17: 0.998 ops/s
+Iteration  18: 0.997 ops/s
+Iteration  19: 0.999 ops/s
+Iteration  20: 0.999 ops/s
+Iteration  21: 0.999 ops/s
+Iteration  22: 0.996 ops/s
+Iteration  23: 0.997 ops/s
+Iteration  24: 0.997 ops/s
+Iteration  25: 0.999 ops/s
+Iteration  26: 0.997 ops/s
+Iteration  27: 0.996 ops/s
+Iteration  28: 0.995 ops/s
+Iteration  29: 0.993 ops/s
+Iteration  30: 0.995 ops/s
+Iteration  31: 0.995 ops/s
+Iteration  32: 0.994 ops/s
+Iteration  33: 0.996 ops/s
+Iteration  34: 0.996 ops/s
+Iteration  35: 0.997 ops/s
+Iteration  36: 0.994 ops/s
+Iteration  37: 0.995 ops/s
+Iteration  38: 0.995 ops/s
+Iteration  39: 0.996 ops/s
+Iteration  40: 0.994 ops/s
+Iteration  41: 0.995 ops/s
+Iteration  42: 0.994 ops/s
+Iteration  43: 0.994 ops/s
+Iteration  44: 0.995 ops/s
+Iteration  45: 0.992 ops/s
+Iteration  46: 0.995 ops/s
+Iteration  47: 0.996 ops/s
+Iteration  48: 0.996 ops/s
+Iteration  49: 0.994 ops/s
+Iteration  50: 0.994 ops/s
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  0.998 ?(99.9%) 0.006 ops/s [Average]
+  (min, avg, max) = (0.992, 0.998, 1.079), stdev = 0.012
+  CI (99.9%): [0.992, 1.004] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:08:24
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                 (program)   Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/boa_fibonacci.xmi  thrpt   50  0.998 ? 0.006  ops/s
+
+Benchmark result is saved to /home/benchmarks/results/boa_truffle_fibonacci_graalvm-ee-19.1.1_1565271444877.json
+{"wallclock_times": [505.00652763499966], "core_cycle_counts": [[358195870956], [541909496878], [349288423257], [379237861989]], "aperf_counts": [[356810825395], [541804553728], [349222110660], [379180809857]], "mperf_counts": [[356846664588], [541824833720], [349225112150], [379187197188]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 15:45:49: INFO] Finished 'boa_truffle_fibonacci(50)' (default-java variant) under 'boa_truffle_graalvm-ee-19.1.1'
+[2019-08-08 15:45:50: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-08 15:45:50: INFO] 1 executions left in scheduler queue
+[2019-08-08 15:45:50: INFO] Next execution is 'boa_truffle_sort(50)' (default-java variant) under 'boa_truffle_graalvm-ee-19.1.1'
+[2019-08-08 15:45:50: INFO] Estimated completion (next execution): 2019-08-08 15:54:45 (0:08:55 from now)
+[2019-08-08 15:45:50: INFO] Reboot in preparation for next execution
+[2019-08-08 15:45:50: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-08 15:55:43: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/boa/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/boa_sort.xmi)
+
+# Run progress: 0.00% complete, ETA 00:08:20
+# Fork: 1 of 1
+Iteration   1: 1.000 ops/s
+Iteration   2: 0.944 ops/s
+Iteration   3: 0.942 ops/s
+Iteration   4: 0.944 ops/s
+Iteration   5: 0.943 ops/s
+Iteration   6: 0.940 ops/s
+Iteration   7: 0.941 ops/s
+Iteration   8: 0.943 ops/s
+Iteration   9: 0.944 ops/s
+Iteration  10: 0.943 ops/s
+Iteration  11: 0.939 ops/s
+Iteration  12: 0.944 ops/s
+Iteration  13: 0.941 ops/s
+Iteration  14: 0.945 ops/s
+Iteration  15: 0.944 ops/s
+Iteration  16: 0.940 ops/s
+Iteration  17: 0.944 ops/s
+Iteration  18: 0.945 ops/s
+Iteration  19: 0.939 ops/s
+Iteration  20: 0.941 ops/s
+Iteration  21: 0.943 ops/s
+Iteration  22: 0.939 ops/s
+Iteration  23: 0.942 ops/s
+Iteration  24: 0.940 ops/s
+Iteration  25: 0.940 ops/s
+Iteration  26: 0.944 ops/s
+Iteration  27: 0.944 ops/s
+Iteration  28: 0.944 ops/s
+Iteration  29: 0.943 ops/s
+Iteration  30: 0.940 ops/s
+Iteration  31: 0.942 ops/s
+Iteration  32: 0.942 ops/s
+Iteration  33: 0.944 ops/s
+Iteration  34: 0.938 ops/s
+Iteration  35: 0.940 ops/s
+Iteration  36: 0.944 ops/s
+Iteration  37: 0.942 ops/s
+Iteration  38: 0.942 ops/s
+Iteration  39: 0.942 ops/s
+Iteration  40: 0.944 ops/s
+Iteration  41: 0.944 ops/s
+Iteration  42: 0.942 ops/s
+Iteration  43: 0.941 ops/s
+Iteration  44: 0.944 ops/s
+Iteration  45: 0.941 ops/s
+Iteration  46: 0.937 ops/s
+Iteration  47: 0.942 ops/s
+Iteration  48: 0.937 ops/s
+Iteration  49: 0.939 ops/s
+Iteration  50: 0.942 ops/s
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  0.943 ?(99.9%) 0.004 ops/s [Average]
+  (min, avg, max) = (0.937, 0.943, 1.000), stdev = 0.008
+  CI (99.9%): [0.939, 0.947] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:08:51
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                            (program)   Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/boa_sort.xmi  thrpt   50  0.943 ? 0.004  ops/s
+
+Benchmark result is saved to /home/benchmarks/results/boa_truffle_sort_graalvm-ee-19.1.1_1565272011752.json
+{"wallclock_times": [531.2490871760001], "core_cycle_counts": [[448940112191], [434648274363], [382190932461], [472007586815]], "aperf_counts": [[446842121470], [434426758179], [382071960842], [471903646775]], "mperf_counts": [[446841754716], [434426909844], [382072006264], [471903734668]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-08 15:55:43: INFO] Finished 'boa_truffle_sort(50)' (default-java variant) under 'boa_truffle_graalvm-ee-19.1.1'
+[2019-08-08 15:55:43: INFO] Estimated completion (whole session): 2019-08-08 15:55:43 (0:00:00 from now)
+[2019-08-08 15:55:43: INFO] 0 executions left in scheduler queue
+[2019-08-08 15:55:43: INFO] Done: Results dumped to benchmarks_results.json.bz2
+[2019-08-08 15:55:43: WARNING] Errors/warnings occurred -- read the log!
+[2019-08-08 15:55:43: INFO] Session completed. Log file at: 'benchmarks.log'
+
+Errors/warnings occurred -- read the log!
+
+Don't forget to disable Krun at boot.

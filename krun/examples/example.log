@@ -1,0 +1,58 @@
+[2019-07-18 16:32:15: INFO] Wait 1 secs to allow system to cool prior to collecting initial temperature readings
+[2019-07-18 16:32:16: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-07-18 16:32:48: INFO] Finished 'nbody(15)' (default-c variant) under 'C'
+[2019-07-18 16:32:48: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-07-18 16:32:48: INFO] 11 executions left in scheduler queue
+[2019-07-18 16:32:48: INFO] Executions until ETA known: 5
+[2019-07-18 16:32:48: INFO] Next execution is 'fannkuch_redux(100)' (default-c variant) under 'C'
+[2019-07-18 16:32:49: INFO] Estimated completion (next execution): 2019-07-18 16:33:21 (0:00:32 from now)
+[2019-07-18 16:32:49: INFO] Reboot in preparation for next execution
+[2019-07-18 16:32:49: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-07-18 16:33:21: INFO] Finished 'fannkuch_redux(100)' (default-c variant) under 'C'
+[2019-07-18 16:33:21: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-07-18 16:33:21: INFO] 10 executions left in scheduler queue
+[2019-07-18 16:33:21: INFO] Executions until ETA known: 4
+[2019-07-18 16:33:21: INFO] Next execution is 'nbody(15)' (default-python variant) under 'PyPy'
+[2019-07-18 16:33:21: INFO] Estimated completion (next execution): 2019-07-18 16:33:53 (0:00:31 from now)
+[2019-07-18 16:33:21: INFO] Reboot in preparation for next execution
+[2019-07-18 16:33:21: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-07-18 16:34:03: WARNING] APERF/MPERF ratio badness detected
+  in_proc_iter=0, core=0, type=throttle, ratio=0.973524075701
+  in_proc_iter=1, core=0, type=throttle, ratio=0.994947293531
+  in_proc_iter=2, core=0, type=throttle, ratio=0.994033078319
+
+The process execution will be retried until the ratios are OK.
+[2019-07-18 16:34:03: INFO] Finished 'nbody(15)' (default-python variant) under 'PyPy'
+[2019-07-18 16:34:03: INFO] Rebooting to re-run previous process execution
+[2019-07-18 16:34:03: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-07-18 16:34:45: INFO] Finished 'nbody(15)' (default-python variant) under 'PyPy'
+[2019-07-18 16:34:45: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-07-18 16:34:45: INFO] 9 executions left in scheduler queue
+[2019-07-18 16:34:45: INFO] Executions until ETA known: 3
+[2019-07-18 16:34:45: INFO] Next execution is 'fannkuch_redux(100)' (default-python variant) under 'PyPy'
+[2019-07-18 16:34:45: INFO] Estimated completion (next execution): 2019-07-18 16:35:25 (0:00:40 from now)
+[2019-07-18 16:34:45: INFO] Reboot in preparation for next execution
+[2019-07-18 16:34:45: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-07-18 16:35:21: INFO] Finished 'fannkuch_redux(100)' (default-python variant) under 'PyPy'
+[2019-07-18 16:35:21: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-07-18 16:35:21: INFO] 8 executions left in scheduler queue
+[2019-07-18 16:35:21: INFO] Executions until ETA known: 2
+[2019-07-18 16:35:21: INFO] Next execution is 'nbody(15)' (default-lua variant) under 'LuaJIT'
+[2019-07-18 16:35:21: INFO] Estimated completion (next execution): 2019-07-18 16:35:56 (0:00:34 from now)
+[2019-07-18 16:35:21: INFO] Reboot in preparation for next execution
+[2019-07-18 16:35:21: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-07-18 16:35:55: INFO] Finished 'nbody(15)' (default-lua variant) under 'LuaJIT'
+[2019-07-18 16:35:55: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-07-18 16:35:55: INFO] 7 executions left in scheduler queue
+[2019-07-18 16:35:55: INFO] Executions until ETA known: 1
+[2019-07-18 16:35:55: INFO] Next execution is 'fannkuch_redux(100)' (default-lua variant) under 'LuaJIT'
+[2019-07-18 16:35:55: INFO] Estimated completion (next execution): 2019-07-18 16:36:27 (0:00:31 from now)
+[2019-07-18 16:35:55: INFO] Reboot in preparation for next execution
+[2019-07-18 16:35:55: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-07-18 16:36:28: INFO] Finished 'fannkuch_redux(100)' (default-lua variant) under 'LuaJIT'
+[2019-07-18 16:36:28: INFO] Estimated completion (whole session): 2019-07-18 16:39:50 (0:03:21 from now)
+[2019-07-18 16:36:28: INFO] 6 executions left in scheduler queue
+[2019-07-18 16:36:28: INFO] Next execution is 'nbody(15)' (default-c variant) under 'C'
+[2019-07-18 16:36:28: INFO] Estimated completion (next execution): 2019-07-18 16:37:00 (0:00:31 from now)
+[2019-07-18 16:36:28: INFO] Reboot in preparation for next execution
+[2019-07-18 16:36:28: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)

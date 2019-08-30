@@ -1,0 +1,45 @@
+[
+    {
+        "benchmark" : "fr.mleduc.minijava.MinijavaVisitorBenchmark.logoInterpreter",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "measurementIterations" : 1,
+        "measurementTime" : "1 s",
+        "params" : {
+            "program" : "/home/benchmarks/programs/minijava_fibonacci.xmi"
+        },
+        "primaryMetric" : {
+            "score" : 7.983918899,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 7.983918899,
+                "50.0" : 7.983918899,
+                "90.0" : 7.983918899,
+                "95.0" : 7.983918899,
+                "99.0" : 7.983918899,
+                "99.9" : 7.983918899,
+                "99.99" : 7.983918899,
+                "99.999" : 7.983918899,
+                "99.9999" : 7.983918899,
+                "100.0" : 7.983918899
+            },
+            "scoreUnit" : "s",
+            "rawData" : [
+                [
+                    7.983918899
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

@@ -1,0 +1,2181 @@
+[2019-08-14 14:26:49: INFO] Wait 1 secs to allow system to cool prior to collecting initial temperature readings
+[2019-08-14 14:26:50: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 14:27:22: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/minijava/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_sort.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: java.lang.NullPointerException
+	at miniJava.interpreter.miniJava.impl.SymbolRefImpl.evaluateExpression(SymbolRefImpl.java:105)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:227)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.ForStatementImpl.evaluateStatement(ForStatementImpl.java:277)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:192)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.ExpressionImpl.evaluateStatement(ExpressionImpl.java:27)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.ProgramImpl.execute(ProgramImpl.java:219)
+	at interpreter.minijava.interpreter.minijava.language.TrufflebenchLanguage$1.execute(TrufflebenchLanguage.java:59)
+	at <trufflebench> null(Unknown)
+	at org.graalvm.polyglot.Value.execute(Value.java:336)
+	at lang.truffle.benchmark.MyBenchmark.testMethod(MyBenchmark.java:68)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_ss_jmhStub(MyBenchmark_testMethod_jmhTest.java:476)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_SingleShotTime(MyBenchmark_testMethod_jmhTest.java:435)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+java.lang.NullPointerException
+	at miniJava.interpreter.miniJava.impl.SymbolRefImpl.evaluateExpression(SymbolRefImpl.java:105)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:227)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.ForStatementImpl.evaluateStatement(ForStatementImpl.java:277)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:192)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.ExpressionImpl.evaluateStatement(ExpressionImpl.java:27)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.ProgramImpl.execute(ProgramImpl.java:219)
+	at interpreter.minijava.interpreter.minijava.language.TrufflebenchLanguage$1.execute(TrufflebenchLanguage.java:59)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:328)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:318)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:305)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:287)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:242)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:63)
+	at interpreter.minijava.interpreter.minijava.language.Ctx$FunctionTruffleObject$Execute.doDirect(Ctx.java:66)
+	at interpreter.minijava.interpreter.minijava.language.FunctionTruffleObjectGen$InteropLibraryExports$Cached.executeAndSpecialize(FunctionTruffleObjectGen.java:149)
+	at interpreter.minijava.interpreter.minijava.language.FunctionTruffleObjectGen$InteropLibraryExports$Cached.execute(FunctionTruffleObjectGen.java:104)
+	at com.oracle.truffle.api.interop.InteropLibraryGen$CachedDispatch.execute(InteropLibraryGen.java:2626)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AbstractExecuteNode.executeShared(PolyglotValue.java:1345)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$ExecuteNoArgsNode.executeImpl(PolyglotValue.java:1452)
+	at com.oracle.truffle.polyglot.HostToGuestRootNode.execute(HostToGuestRootNode.java:94)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:328)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:318)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:305)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:287)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget$OptimizedCallProfiled.call(OptimizedCallTarget.java:878)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropValue.execute(PolyglotValue.java:2013)
+	at org.graalvm.polyglot.Value.execute(Value.java:336)
+	at lang.truffle.benchmark.MyBenchmark.testMethod(MyBenchmark.java:68)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_ss_jmhStub(MyBenchmark_testMethod_jmhTest.java:476)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_SingleShotTime(MyBenchmark_testMethod_jmhTest.java:435)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: Attached Guest Language Frames (2)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_sort_graalvm-ce-19.1.1_1565785641405.json
+{"wallclock_times": [0.7364460970275104], "core_cycle_counts": [[1311521779], [1224423451], [1523535376], [833341736]], "aperf_counts": [[1309562201], [1218649950], [1521620159], [830434249]], "mperf_counts": [[1310206810], [1218649672], [1522019366], [830619756]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 14:27:22: INFO] Finished 'minijava_truffle_sort(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-14 14:27:22: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 14:27:22: INFO] 15 executions left in scheduler queue
+[2019-08-14 14:27:22: INFO] Next execution is 'minijava_truffle_binarytree(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-14 14:27:22: INFO] Estimated completion (next execution): 2019-08-14 14:27:53 (0:00:30 from now)
+[2019-08-14 14:27:22: INFO] Reboot in preparation for next execution
+[2019-08-14 14:27:22: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 14:27:54: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/minijava/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_binarytree.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: java.lang.NullPointerException
+	at miniJava.interpreter.miniJava.impl.SymbolRefImpl.evaluateExpression(SymbolRefImpl.java:105)
+	at miniJava.interpreter.miniJava.impl.PlusImpl.evaluateExpression(PlusImpl.java:177)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:192)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.ExpressionImpl.evaluateStatement(ExpressionImpl.java:27)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.ProgramImpl.execute(ProgramImpl.java:219)
+	at interpreter.minijava.interpreter.minijava.language.TrufflebenchLanguage$1.execute(TrufflebenchLanguage.java:59)
+	at <trufflebench> null(Unknown)
+	at org.graalvm.polyglot.Value.execute(Value.java:336)
+	at lang.truffle.benchmark.MyBenchmark.testMethod(MyBenchmark.java:68)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_ss_jmhStub(MyBenchmark_testMethod_jmhTest.java:476)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_SingleShotTime(MyBenchmark_testMethod_jmhTest.java:435)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+java.lang.NullPointerException
+	at miniJava.interpreter.miniJava.impl.SymbolRefImpl.evaluateExpression(SymbolRefImpl.java:105)
+	at miniJava.interpreter.miniJava.impl.PlusImpl.evaluateExpression(PlusImpl.java:177)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:192)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.ExpressionImpl.evaluateStatement(ExpressionImpl.java:27)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.ProgramImpl.execute(ProgramImpl.java:219)
+	at interpreter.minijava.interpreter.minijava.language.TrufflebenchLanguage$1.execute(TrufflebenchLanguage.java:59)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:328)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:318)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:305)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:287)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:242)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:63)
+	at interpreter.minijava.interpreter.minijava.language.Ctx$FunctionTruffleObject$Execute.doDirect(Ctx.java:66)
+	at interpreter.minijava.interpreter.minijava.language.FunctionTruffleObjectGen$InteropLibraryExports$Cached.executeAndSpecialize(FunctionTruffleObjectGen.java:149)
+	at interpreter.minijava.interpreter.minijava.language.FunctionTruffleObjectGen$InteropLibraryExports$Cached.execute(FunctionTruffleObjectGen.java:104)
+	at com.oracle.truffle.api.interop.InteropLibraryGen$CachedDispatch.execute(InteropLibraryGen.java:2626)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AbstractExecuteNode.executeShared(PolyglotValue.java:1345)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$ExecuteNoArgsNode.executeImpl(PolyglotValue.java:1452)
+	at com.oracle.truffle.polyglot.HostToGuestRootNode.execute(HostToGuestRootNode.java:94)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:328)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:318)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:305)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:287)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget$OptimizedCallProfiled.call(OptimizedCallTarget.java:878)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropValue.execute(PolyglotValue.java:2013)
+	at org.graalvm.polyglot.Value.execute(Value.java:336)
+	at lang.truffle.benchmark.MyBenchmark.testMethod(MyBenchmark.java:68)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_ss_jmhStub(MyBenchmark_testMethod_jmhTest.java:476)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_SingleShotTime(MyBenchmark_testMethod_jmhTest.java:435)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: Attached Guest Language Frames (2)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_binarytree_graalvm-ce-19.1.1_1565785673956.json
+{"wallclock_times": [0.7433544109808281], "core_cycle_counts": [[1952491654], [775821957], [1210969945], [967436983]], "aperf_counts": [[1951451704], [772188098], [1207903339], [961518606]], "mperf_counts": [[1951451864], [772187732], [1207903092], [961518484]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 14:27:54: WARNING] Mail quota reached.
+[2019-08-14 14:27:54: INFO] Finished 'minijava_truffle_binarytree(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-14 14:27:54: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 14:27:54: INFO] 14 executions left in scheduler queue
+[2019-08-14 14:27:54: INFO] Next execution is 'minijava_truffle_fannkuchredux(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-14 14:27:54: INFO] Estimated completion (next execution): 2019-08-14 14:28:25 (0:00:30 from now)
+[2019-08-14 14:27:54: INFO] Reboot in preparation for next execution
+[2019-08-14 14:27:54: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 14:28:27: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/minijava/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_fannkuchredux.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: java.lang.NullPointerException
+	at miniJava.interpreter.miniJava.impl.SymbolRefImpl.evaluateExpression(SymbolRefImpl.java:105)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:227)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.ForStatementImpl.evaluateStatement(ForStatementImpl.java:277)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.PlusImpl.evaluateExpression(PlusImpl.java:178)
+	at miniJava.interpreter.miniJava.impl.PrintStatementImpl.evaluateStatement(PrintStatementImpl.java:125)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.ExpressionImpl.evaluateStatement(ExpressionImpl.java:27)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.ProgramImpl.execute(ProgramImpl.java:219)
+	at interpreter.minijava.interpreter.minijava.language.TrufflebenchLanguage$1.execute(TrufflebenchLanguage.java:59)
+	at <trufflebench> null(Unknown)
+	at org.graalvm.polyglot.Value.execute(Value.java:336)
+	at lang.truffle.benchmark.MyBenchmark.testMethod(MyBenchmark.java:68)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_ss_jmhStub(MyBenchmark_testMethod_jmhTest.java:476)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_SingleShotTime(MyBenchmark_testMethod_jmhTest.java:435)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+java.lang.NullPointerException
+	at miniJava.interpreter.miniJava.impl.SymbolRefImpl.evaluateExpression(SymbolRefImpl.java:105)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:227)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.ForStatementImpl.evaluateStatement(ForStatementImpl.java:277)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.PlusImpl.evaluateExpression(PlusImpl.java:178)
+	at miniJava.interpreter.miniJava.impl.PrintStatementImpl.evaluateStatement(PrintStatementImpl.java:125)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.ExpressionImpl.evaluateStatement(ExpressionImpl.java:27)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.ProgramImpl.execute(ProgramImpl.java:219)
+	at interpreter.minijava.interpreter.minijava.language.TrufflebenchLanguage$1.execute(TrufflebenchLanguage.java:59)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:328)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:318)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:305)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:287)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:242)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:63)
+	at interpreter.minijava.interpreter.minijava.language.Ctx$FunctionTruffleObject$Execute.doDirect(Ctx.java:66)
+	at interpreter.minijava.interpreter.minijava.language.FunctionTruffleObjectGen$InteropLibraryExports$Cached.executeAndSpecialize(FunctionTruffleObjectGen.java:149)
+	at interpreter.minijava.interpreter.minijava.language.FunctionTruffleObjectGen$InteropLibraryExports$Cached.execute(FunctionTruffleObjectGen.java:104)
+	at com.oracle.truffle.api.interop.InteropLibraryGen$CachedDispatch.execute(InteropLibraryGen.java:2626)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AbstractExecuteNode.executeShared(PolyglotValue.java:1345)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$ExecuteNoArgsNode.executeImpl(PolyglotValue.java:1452)
+	at com.oracle.truffle.polyglot.HostToGuestRootNode.execute(HostToGuestRootNode.java:94)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:328)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:318)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:305)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:287)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget$OptimizedCallProfiled.call(OptimizedCallTarget.java:878)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropValue.execute(PolyglotValue.java:2013)
+	at org.graalvm.polyglot.Value.execute(Value.java:336)
+	at lang.truffle.benchmark.MyBenchmark.testMethod(MyBenchmark.java:68)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_ss_jmhStub(MyBenchmark_testMethod_jmhTest.java:476)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_SingleShotTime(MyBenchmark_testMethod_jmhTest.java:435)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: Attached Guest Language Frames (2)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_fannkuchredux_graalvm-ce-19.1.1_1565785706515.json
+{"wallclock_times": [0.744901445985306], "core_cycle_counts": [[817282865], [2019513423], [893832882], [1199535439]], "aperf_counts": [[814542808], [2018674504], [890540085], [1194232227]], "mperf_counts": [[814542944], [2018674600], [890539920], [1194231896]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 14:28:27: INFO] Finished 'minijava_truffle_fannkuchredux(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-14 14:28:27: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 14:28:27: INFO] 13 executions left in scheduler queue
+[2019-08-14 14:28:27: INFO] Next execution is 'minijava_truffle_fibonacci(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-14 14:28:27: INFO] Estimated completion (next execution): 2019-08-14 14:28:58 (0:00:30 from now)
+[2019-08-14 14:28:27: INFO] Reboot in preparation for next execution
+[2019-08-14 14:28:27: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 14:32:59: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/minijava/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_fibonacci.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: 4.801 s/op
+Iteration   2: 4.734 s/op
+Iteration   3: 4.834 s/op
+Iteration   4: 4.781 s/op
+Iteration   5: 4.796 s/op
+Iteration   6: 4.732 s/op
+Iteration   7: 4.780 s/op
+Iteration   8: 4.802 s/op
+Iteration   9: 4.783 s/op
+Iteration  10: 4.785 s/op
+Iteration  11: 4.789 s/op
+Iteration  12: 4.774 s/op
+Iteration  13: 4.788 s/op
+Iteration  14: 4.786 s/op
+Iteration  15: 4.793 s/op
+Iteration  16: 4.788 s/op
+Iteration  17: 4.789 s/op
+Iteration  18: 4.800 s/op
+Iteration  19: 4.769 s/op
+Iteration  20: 4.734 s/op
+Iteration  21: 4.768 s/op
+Iteration  22: 4.784 s/op
+Iteration  23: 4.775 s/op
+Iteration  24: 4.789 s/op
+Iteration  25: 4.771 s/op
+Iteration  26: 4.790 s/op
+Iteration  27: 4.772 s/op
+Iteration  28: 4.783 s/op
+Iteration  29: 4.759 s/op
+Iteration  30: 4.774 s/op
+Iteration  31: 4.775 s/op
+Iteration  32: 4.790 s/op
+Iteration  33: 4.800 s/op
+Iteration  34: 4.784 s/op
+Iteration  35: 4.771 s/op
+Iteration  36: 4.759 s/op
+Iteration  37: 4.785 s/op
+Iteration  38: 4.793 s/op
+Iteration  39: 4.795 s/op
+Iteration  40: 4.785 s/op
+Iteration  41: 4.804 s/op
+Iteration  42: 4.777 s/op
+Iteration  43: 4.789 s/op
+Iteration  44: 4.799 s/op
+Iteration  45: 4.771 s/op
+Iteration  46: 4.789 s/op
+Iteration  47: 4.786 s/op
+Iteration  48: 4.802 s/op
+Iteration  49: 4.722 s/op
+Iteration  50: 4.782 s/op
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  N = 50
+  mean =      4.781 ?(99.9%) 0.010 s/op
+
+  Histogram, s/op:
+    [4.700, 4.713) = 0 
+    [4.713, 4.725) = 1 
+    [4.725, 4.738) = 3 
+    [4.738, 4.750) = 0 
+    [4.750, 4.763) = 2 
+    [4.763, 4.775) = 8 
+    [4.775, 4.788) = 15 
+    [4.788, 4.800) = 15 
+    [4.800, 4.813) = 5 
+    [4.813, 4.825) = 0 
+    [4.825, 4.838) = 1 
+    [4.838, 4.850) = 0 
+    [4.850, 4.863) = 0 
+    [4.863, 4.875) = 0 
+    [4.875, 4.888) = 0 
+    [4.888, 4.900) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      4.722 s/op
+     p(50.0000) =      4.785 s/op
+     p(90.0000) =      4.801 s/op
+     p(95.0000) =      4.803 s/op
+     p(99.0000) =      4.834 s/op
+     p(99.9000) =      4.834 s/op
+     p(99.9900) =      4.834 s/op
+     p(99.9990) =      4.834 s/op
+     p(99.9999) =      4.834 s/op
+    p(100.0000) =      4.834 s/op
+
+
+# Run complete. Total time: 00:03:59
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                      (program)  Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/minijava_fibonacci.xmi    ss   50  4.781 ? 0.010   s/op
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_fibonacci_graalvm-ce-19.1.1_1565785739056.json
+{"wallclock_times": [240.04929738905048], "core_cycle_counts": [[214458933748], [122261697527], [168480424325], [272792506835]], "aperf_counts": [[213871983079], [122215107062], [168456112394], [272774569666]], "mperf_counts": [[213871760040], [122215109948], [168456144556], [272774585824]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 14:32:59: INFO] Finished 'minijava_truffle_fibonacci(50)' (default-java variant) under 'minijava_truffle_graalvm-ce-19.1.1'
+[2019-08-14 14:32:59: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 14:32:59: INFO] 12 executions left in scheduler queue
+[2019-08-14 14:32:59: INFO] Next execution is 'minijava_truffle_sort(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-14 14:32:59: INFO] Estimated completion (next execution): 2019-08-14 14:37:29 (0:04:30 from now)
+[2019-08-14 14:32:59: INFO] Reboot in preparation for next execution
+[2019-08-14 14:32:59: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 14:33:54: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/minijava/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_sort.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: java.lang.NullPointerException
+	at miniJava.interpreter.miniJava.impl.SymbolRefImpl.evaluateExpression(SymbolRefImpl.java:105)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:227)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.ForStatementImpl.evaluateStatement(ForStatementImpl.java:277)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:192)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.ExpressionImpl.evaluateStatement(ExpressionImpl.java:27)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.ProgramImpl.execute(ProgramImpl.java:219)
+	at interpreter.minijava.interpreter.minijava.language.TrufflebenchLanguage$1.execute(TrufflebenchLanguage.java:59)
+	at <trufflebench> null(Unknown)
+	at org.graalvm.polyglot.Value.execute(Value.java:336)
+	at lang.truffle.benchmark.MyBenchmark.testMethod(MyBenchmark.java:68)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_ss_jmhStub(MyBenchmark_testMethod_jmhTest.java:476)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_SingleShotTime(MyBenchmark_testMethod_jmhTest.java:435)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+java.lang.NullPointerException
+	at miniJava.interpreter.miniJava.impl.SymbolRefImpl.evaluateExpression(SymbolRefImpl.java:105)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:227)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.ForStatementImpl.evaluateStatement(ForStatementImpl.java:277)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:192)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.ExpressionImpl.evaluateStatement(ExpressionImpl.java:27)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.ProgramImpl.execute(ProgramImpl.java:219)
+	at interpreter.minijava.interpreter.minijava.language.TrufflebenchLanguage$1.execute(TrufflebenchLanguage.java:59)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:328)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:318)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:305)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:287)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:242)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:63)
+	at interpreter.minijava.interpreter.minijava.language.Ctx$FunctionTruffleObject$Execute.doDirect(Ctx.java:66)
+	at interpreter.minijava.interpreter.minijava.language.FunctionTruffleObjectGen$InteropLibraryExports$Cached.executeAndSpecialize(FunctionTruffleObjectGen.java:149)
+	at interpreter.minijava.interpreter.minijava.language.FunctionTruffleObjectGen$InteropLibraryExports$Cached.execute(FunctionTruffleObjectGen.java:104)
+	at com.oracle.truffle.api.interop.InteropLibraryGen$CachedDispatch.execute(InteropLibraryGen.java:2626)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AbstractExecuteNode.executeShared(PolyglotValue.java:1345)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$ExecuteNoArgsNode.executeImpl(PolyglotValue.java:1452)
+	at com.oracle.truffle.polyglot.HostToGuestRootNode.execute(HostToGuestRootNode.java:94)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:328)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:318)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:305)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:287)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget$OptimizedCallProfiled.call(OptimizedCallTarget.java:878)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropValue.execute(PolyglotValue.java:2013)
+	at org.graalvm.polyglot.Value.execute(Value.java:336)
+	at lang.truffle.benchmark.MyBenchmark.testMethod(MyBenchmark.java:68)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_ss_jmhStub(MyBenchmark_testMethod_jmhTest.java:476)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_SingleShotTime(MyBenchmark_testMethod_jmhTest.java:435)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: Attached Guest Language Frames (2)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_sort_graalvm-ee-19.1.1_1565786033984.json
+{"wallclock_times": [0.7442695240024477], "core_cycle_counts": [[1953102531], [664316639], [1045029719], [1296662299]], "aperf_counts": [[1951937994], [659832568], [1041512000], [1290532124]], "mperf_counts": [[1951938132], [659832132], [1041511688], [1290893200]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 14:33:54: INFO] Finished 'minijava_truffle_sort(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-14 14:33:54: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 14:33:54: INFO] 11 executions left in scheduler queue
+[2019-08-14 14:33:54: INFO] Next execution is 'minijava_truffle_binarytree(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-14 14:33:54: INFO] Estimated completion (next execution): 2019-08-14 14:34:25 (0:00:30 from now)
+[2019-08-14 14:33:54: INFO] Reboot in preparation for next execution
+[2019-08-14 14:33:54: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 14:34:28: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/minijava/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_binarytree.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: java.lang.NullPointerException
+	at miniJava.interpreter.miniJava.impl.SymbolRefImpl.evaluateExpression(SymbolRefImpl.java:105)
+	at miniJava.interpreter.miniJava.impl.PlusImpl.evaluateExpression(PlusImpl.java:177)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:192)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.ExpressionImpl.evaluateStatement(ExpressionImpl.java:27)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.ProgramImpl.execute(ProgramImpl.java:219)
+	at interpreter.minijava.interpreter.minijava.language.TrufflebenchLanguage$1.execute(TrufflebenchLanguage.java:59)
+	at <trufflebench> null(Unknown)
+	at org.graalvm.polyglot.Value.execute(Value.java:336)
+	at lang.truffle.benchmark.MyBenchmark.testMethod(MyBenchmark.java:68)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_ss_jmhStub(MyBenchmark_testMethod_jmhTest.java:476)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_SingleShotTime(MyBenchmark_testMethod_jmhTest.java:435)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+java.lang.NullPointerException
+	at miniJava.interpreter.miniJava.impl.SymbolRefImpl.evaluateExpression(SymbolRefImpl.java:105)
+	at miniJava.interpreter.miniJava.impl.PlusImpl.evaluateExpression(PlusImpl.java:177)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:192)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.ExpressionImpl.evaluateStatement(ExpressionImpl.java:27)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.ProgramImpl.execute(ProgramImpl.java:219)
+	at interpreter.minijava.interpreter.minijava.language.TrufflebenchLanguage$1.execute(TrufflebenchLanguage.java:59)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:328)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:318)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:305)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:287)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:242)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:63)
+	at interpreter.minijava.interpreter.minijava.language.Ctx$FunctionTruffleObject$Execute.doDirect(Ctx.java:66)
+	at interpreter.minijava.interpreter.minijava.language.FunctionTruffleObjectGen$InteropLibraryExports$Cached.executeAndSpecialize(FunctionTruffleObjectGen.java:149)
+	at interpreter.minijava.interpreter.minijava.language.FunctionTruffleObjectGen$InteropLibraryExports$Cached.execute(FunctionTruffleObjectGen.java:104)
+	at com.oracle.truffle.api.interop.InteropLibraryGen$CachedDispatch.execute(InteropLibraryGen.java:2626)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AbstractExecuteNode.executeShared(PolyglotValue.java:1345)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$ExecuteNoArgsNode.executeImpl(PolyglotValue.java:1452)
+	at com.oracle.truffle.polyglot.HostToGuestRootNode.execute(HostToGuestRootNode.java:94)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:328)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:318)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:305)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:287)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget$OptimizedCallProfiled.call(OptimizedCallTarget.java:878)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropValue.execute(PolyglotValue.java:2013)
+	at org.graalvm.polyglot.Value.execute(Value.java:336)
+	at lang.truffle.benchmark.MyBenchmark.testMethod(MyBenchmark.java:68)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_ss_jmhStub(MyBenchmark_testMethod_jmhTest.java:476)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_SingleShotTime(MyBenchmark_testMethod_jmhTest.java:435)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: Attached Guest Language Frames (2)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_binarytree_graalvm-ee-19.1.1_1565786067538.json
+{"wallclock_times": [0.7553579760133289], "core_cycle_counts": [[988121030], [780981800], [1126163629], [2015530337]], "aperf_counts": [[984715577], [777437624], [1121110553], [2014250555]], "mperf_counts": [[984715608], [777437268], [1121110268], [2014250500]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 14:34:28: INFO] Finished 'minijava_truffle_binarytree(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-14 14:34:28: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 14:34:28: INFO] 10 executions left in scheduler queue
+[2019-08-14 14:34:28: INFO] Next execution is 'minijava_truffle_fannkuchredux(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-14 14:34:28: INFO] Estimated completion (next execution): 2019-08-14 14:34:59 (0:00:30 from now)
+[2019-08-14 14:34:28: INFO] Reboot in preparation for next execution
+[2019-08-14 14:34:28: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 14:35:00: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/minijava/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_fannkuchredux.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: <failure>
+
+org.graalvm.polyglot.PolyglotException: java.lang.NullPointerException
+	at miniJava.interpreter.miniJava.impl.SymbolRefImpl.evaluateExpression(SymbolRefImpl.java:105)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:227)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.ForStatementImpl.evaluateStatement(ForStatementImpl.java:277)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.PlusImpl.evaluateExpression(PlusImpl.java:178)
+	at miniJava.interpreter.miniJava.impl.PrintStatementImpl.evaluateStatement(PrintStatementImpl.java:125)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.ExpressionImpl.evaluateStatement(ExpressionImpl.java:27)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.ProgramImpl.execute(ProgramImpl.java:219)
+	at interpreter.minijava.interpreter.minijava.language.TrufflebenchLanguage$1.execute(TrufflebenchLanguage.java:59)
+	at <trufflebench> null(Unknown)
+	at org.graalvm.polyglot.Value.execute(Value.java:336)
+	at lang.truffle.benchmark.MyBenchmark.testMethod(MyBenchmark.java:68)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_ss_jmhStub(MyBenchmark_testMethod_jmhTest.java:476)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_SingleShotTime(MyBenchmark_testMethod_jmhTest.java:435)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Original Internal Error: 
+java.lang.NullPointerException
+	at miniJava.interpreter.miniJava.impl.SymbolRefImpl.evaluateExpression(SymbolRefImpl.java:105)
+	at miniJava.interpreter.miniJava.impl.AssignmentImpl.evaluateStatement(AssignmentImpl.java:227)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.ForStatementImpl.evaluateStatement(ForStatementImpl.java:277)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.PlusImpl.evaluateExpression(PlusImpl.java:178)
+	at miniJava.interpreter.miniJava.impl.PrintStatementImpl.evaluateStatement(PrintStatementImpl.java:125)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatement(BlockImpl.java:128)
+	at miniJava.interpreter.miniJava.impl.MethodImpl.call(MethodImpl.java:310)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.call(MethodCallImpl.java:243)
+	at miniJava.interpreter.miniJava.impl.MethodCallImpl.evaluateExpression(MethodCallImpl.java:229)
+	at miniJava.interpreter.miniJava.impl.ExpressionImpl.evaluateStatement(ExpressionImpl.java:27)
+	at miniJava.interpreter.miniJava.impl.BlockImpl.evaluateStatementKeepContext(BlockImpl.java:116)
+	at miniJava.interpreter.miniJava.impl.ProgramImpl.execute(ProgramImpl.java:219)
+	at interpreter.minijava.interpreter.minijava.language.TrufflebenchLanguage$1.execute(TrufflebenchLanguage.java:59)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:328)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:318)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:305)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:287)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:242)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:63)
+	at interpreter.minijava.interpreter.minijava.language.Ctx$FunctionTruffleObject$Execute.doDirect(Ctx.java:66)
+	at interpreter.minijava.interpreter.minijava.language.FunctionTruffleObjectGen$InteropLibraryExports$Cached.executeAndSpecialize(FunctionTruffleObjectGen.java:149)
+	at interpreter.minijava.interpreter.minijava.language.FunctionTruffleObjectGen$InteropLibraryExports$Cached.execute(FunctionTruffleObjectGen.java:104)
+	at com.oracle.truffle.api.interop.InteropLibraryGen$CachedDispatch.execute(InteropLibraryGen.java:2626)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$AbstractExecuteNode.executeShared(PolyglotValue.java:1345)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropCodeCache$ExecuteNoArgsNode.executeImpl(PolyglotValue.java:1452)
+	at com.oracle.truffle.polyglot.HostToGuestRootNode.execute(HostToGuestRootNode.java:94)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:328)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:318)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:305)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:287)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget$OptimizedCallProfiled.call(OptimizedCallTarget.java:878)
+	at com.oracle.truffle.polyglot.PolyglotValue$InteropValue.execute(PolyglotValue.java:2013)
+	at org.graalvm.polyglot.Value.execute(Value.java:336)
+	at lang.truffle.benchmark.MyBenchmark.testMethod(MyBenchmark.java:68)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_ss_jmhStub(MyBenchmark_testMethod_jmhTest.java:476)
+	at lang.truffle.benchmark.generated.MyBenchmark_testMethod_jmhTest.testMethod_SingleShotTime(MyBenchmark_testMethod_jmhTest.java:435)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:453)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:437)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: Attached Guest Language Frames (2)
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark  Mode  Cnt  Score   Error  Units
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_fannkuchredux_graalvm-ee-19.1.1_1565786100081.json
+{"wallclock_times": [0.7551046410226263], "core_cycle_counts": [[1063420857], [1193491967], [773171477], [1912103281]], "aperf_counts": [[1058355791], [1190367028], [769019914], [1910624314]], "mperf_counts": [[1058355520], [1190366756], [769019524], [1910624284]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 14:35:00: INFO] Finished 'minijava_truffle_fannkuchredux(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-14 14:35:01: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 14:35:01: INFO] 9 executions left in scheduler queue
+[2019-08-14 14:35:01: INFO] Next execution is 'minijava_truffle_fibonacci(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-14 14:35:01: INFO] Estimated completion (next execution): 2019-08-14 14:35:31 (0:00:30 from now)
+[2019-08-14 14:35:01: INFO] Reboot in preparation for next execution
+[2019-08-14 14:35:01: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 14:39:34: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/minijava/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/minijava_fibonacci.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: 4.750 s/op
+Iteration   2: 4.692 s/op
+Iteration   3: 4.926 s/op
+Iteration   4: 4.813 s/op
+Iteration   5: 4.824 s/op
+Iteration   6: 4.810 s/op
+Iteration   7: 4.828 s/op
+Iteration   8: 4.785 s/op
+Iteration   9: 4.844 s/op
+Iteration  10: 4.784 s/op
+Iteration  11: 4.831 s/op
+Iteration  12: 4.782 s/op
+Iteration  13: 4.798 s/op
+Iteration  14: 4.789 s/op
+Iteration  15: 4.799 s/op
+Iteration  16: 4.769 s/op
+Iteration  17: 4.802 s/op
+Iteration  18: 4.783 s/op
+Iteration  19: 4.767 s/op
+Iteration  20: 4.798 s/op
+Iteration  21: 4.805 s/op
+Iteration  22: 4.817 s/op
+Iteration  23: 4.768 s/op
+Iteration  24: 4.787 s/op
+Iteration  25: 4.795 s/op
+Iteration  26: 4.779 s/op
+Iteration  27: 4.743 s/op
+Iteration  28: 4.799 s/op
+Iteration  29: 4.790 s/op
+Iteration  30: 4.788 s/op
+Iteration  31: 4.778 s/op
+Iteration  32: 4.735 s/op
+Iteration  33: 4.770 s/op
+Iteration  34: 4.751 s/op
+Iteration  35: 4.798 s/op
+Iteration  36: 4.832 s/op
+Iteration  37: 4.802 s/op
+Iteration  38: 4.791 s/op
+Iteration  39: 4.832 s/op
+Iteration  40: 4.771 s/op
+Iteration  41: 4.780 s/op
+Iteration  42: 4.756 s/op
+Iteration  43: 4.838 s/op
+Iteration  44: 4.795 s/op
+Iteration  45: 4.829 s/op
+Iteration  46: 4.751 s/op
+Iteration  47: 4.760 s/op
+Iteration  48: 4.756 s/op
+Iteration  49: 4.784 s/op
+Iteration  50: 4.763 s/op
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  N = 50
+  mean =      4.790 ?(99.9%) 0.018 s/op
+
+  Histogram, s/op:
+    [4.600, 4.625) = 0 
+    [4.625, 4.650) = 0 
+    [4.650, 4.675) = 0 
+    [4.675, 4.700) = 1 
+    [4.700, 4.725) = 0 
+    [4.725, 4.750) = 3 
+    [4.750, 4.775) = 11 
+    [4.775, 4.800) = 20 
+    [4.800, 4.825) = 7 
+    [4.825, 4.850) = 7 
+    [4.850, 4.875) = 0 
+    [4.875, 4.900) = 0 
+    [4.900, 4.925) = 0 
+    [4.925, 4.950) = 1 
+    [4.950, 4.975) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      4.692 s/op
+     p(50.0000) =      4.788 s/op
+     p(90.0000) =      4.832 s/op
+     p(95.0000) =      4.841 s/op
+     p(99.0000) =      4.926 s/op
+     p(99.9000) =      4.926 s/op
+     p(99.9900) =      4.926 s/op
+     p(99.9990) =      4.926 s/op
+     p(99.9999) =      4.926 s/op
+    p(100.0000) =      4.926 s/op
+
+
+# Run complete. Total time: 00:04:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                      (program)  Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/minijava_fibonacci.xmi    ss   50  4.790 ? 0.018   s/op
+
+Benchmark result is saved to /home/benchmarks/results/minijava_truffle_fibonacci_graalvm-ee-19.1.1_1565786133664.json
+{"wallclock_times": [240.52701147599146], "core_cycle_counts": [[251244295152], [162848077436], [162468235577], [202115305898]], "aperf_counts": [[250716114144], [162792779722], [162427142874], [202086499839]], "mperf_counts": [[250716703264], [162792848696], [162427223780], [202086560042]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 14:39:34: INFO] Finished 'minijava_truffle_fibonacci(50)' (default-java variant) under 'minijava_truffle_graalvm-ee-19.1.1'
+[2019-08-14 14:39:34: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 14:39:34: INFO] 8 executions left in scheduler queue
+[2019-08-14 14:39:34: INFO] Next execution is 'fsm_truffle_buffers(50)' (default-java variant) under 'fsm_truffle_graalvm-ee-19.1.1'
+[2019-08-14 14:39:34: INFO] Estimated completion (next execution): 2019-08-14 14:44:05 (0:04:30 from now)
+[2019-08-14 14:39:34: INFO] Reboot in preparation for next execution
+[2019-08-14 14:39:34: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 14:42:24: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/fsm/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/fsm_buffers.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: 3.012 s/op
+Iteration   2: 2.431 s/op
+Iteration   3: 2.370 s/op
+Iteration   4: 2.351 s/op
+Iteration   5: 2.343 s/op
+Iteration   6: 2.342 s/op
+Iteration   7: 2.345 s/op
+Iteration   8: 2.347 s/op
+Iteration   9: 2.331 s/op
+Iteration  10: 2.346 s/op
+Iteration  11: 2.349 s/op
+Iteration  12: 2.345 s/op
+Iteration  13: 2.341 s/op
+Iteration  14: 2.339 s/op
+Iteration  15: 2.345 s/op
+Iteration  16: 2.350 s/op
+Iteration  17: 2.351 s/op
+Iteration  18: 2.350 s/op
+Iteration  19: 2.353 s/op
+Iteration  20: 2.346 s/op
+Iteration  21: 2.352 s/op
+Iteration  22: 2.346 s/op
+Iteration  23: 2.346 s/op
+Iteration  24: 2.343 s/op
+Iteration  25: 2.344 s/op
+Iteration  26: 2.346 s/op
+Iteration  27: 2.343 s/op
+Iteration  28: 2.345 s/op
+Iteration  29: 2.346 s/op
+Iteration  30: 2.348 s/op
+Iteration  31: 2.346 s/op
+Iteration  32: 2.347 s/op
+Iteration  33: 2.347 s/op
+Iteration  34: 2.337 s/op
+Iteration  35: 2.351 s/op
+Iteration  36: 2.346 s/op
+Iteration  37: 2.348 s/op
+Iteration  38: 2.353 s/op
+Iteration  39: 2.349 s/op
+Iteration  40: 2.348 s/op
+Iteration  41: 2.338 s/op
+Iteration  42: 2.342 s/op
+Iteration  43: 2.348 s/op
+Iteration  44: 2.346 s/op
+Iteration  45: 2.347 s/op
+Iteration  46: 2.346 s/op
+Iteration  47: 2.347 s/op
+Iteration  48: 2.347 s/op
+Iteration  49: 2.347 s/op
+Iteration  50: 2.347 s/op
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  N = 50
+  mean =      2.361 ?(99.9%) 0.047 s/op
+
+  Histogram, s/op:
+    [2.300, 2.350) = 41 
+    [2.350, 2.400) = 7 
+    [2.400, 2.450) = 1 
+    [2.450, 2.500) = 0 
+    [2.500, 2.550) = 0 
+    [2.550, 2.600) = 0 
+    [2.600, 2.650) = 0 
+    [2.650, 2.700) = 0 
+    [2.700, 2.750) = 0 
+    [2.750, 2.800) = 0 
+    [2.800, 2.850) = 0 
+    [2.850, 2.900) = 0 
+    [2.900, 2.950) = 0 
+    [2.950, 3.000) = 0 
+    [3.000, 3.050) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =      2.331 s/op
+     p(50.0000) =      2.346 s/op
+     p(90.0000) =      2.353 s/op
+     p(95.0000) =      2.397 s/op
+     p(99.0000) =      3.012 s/op
+     p(99.9000) =      3.012 s/op
+     p(99.9900) =      3.012 s/op
+     p(99.9990) =      3.012 s/op
+     p(99.9999) =      3.012 s/op
+    p(100.0000) =      3.012 s/op
+
+
+# Run complete. Total time: 00:01:58
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                               (program)  Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/fsm_buffers.xmi    ss   50  2.361 ? 0.047   s/op
+
+Benchmark result is saved to /home/benchmarks/results/fsm_truffle_buffers_graalvm-ee-19.1.1_1565786425055.json
+{"wallclock_times": [119.05471004697029], "core_cycle_counts": [[101159576433], [101693985696], [91852237751], [95986644367]], "aperf_counts": [[100835696180], [101647743070], [91826286906], [95960125204]], "mperf_counts": [[100835590776], [101647733396], [91826340944], [95960142404]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 14:42:24: INFO] Finished 'fsm_truffle_buffers(50)' (default-java variant) under 'fsm_truffle_graalvm-ee-19.1.1'
+[2019-08-14 14:42:24: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 14:42:24: INFO] 7 executions left in scheduler queue
+[2019-08-14 14:42:24: INFO] Next execution is 'fsm_truffle_buffers(50)' (default-java variant) under 'fsm_truffle_graalvm-ce-19.1.1'
+[2019-08-14 14:42:24: INFO] Estimated completion (next execution): 2019-08-14 14:44:53 (0:02:29 from now)
+[2019-08-14 14:42:24: INFO] Reboot in preparation for next execution
+[2019-08-14 14:42:24: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 14:46:27: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/fsm/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/fsm_buffers.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: 3.921 s/op
+Iteration   2: 3.609 s/op
+Iteration   3: 3.575 s/op
+Iteration   4: 3.662 s/op
+Iteration   5: 3.645 s/op
+Iteration   6: 3.655 s/op
+Iteration   7: 3.647 s/op
+Iteration   8: 3.646 s/op
+Iteration   9: 3.664 s/op
+Iteration  10: 3.657 s/op
+Iteration  11: 3.655 s/op
+Iteration  12: 3.680 s/op
+Iteration  13: 3.625 s/op
+Iteration  14: 3.647 s/op
+Iteration  15: 3.656 s/op
+Iteration  16: 3.647 s/op
+Iteration  17: 3.652 s/op
+Iteration  18: 3.655 s/op
+Iteration  19: 3.651 s/op
+Iteration  20: 3.631 s/op
+Iteration  21: 3.644 s/op
+Iteration  22: 3.651 s/op
+Iteration  23: 3.645 s/op
+Iteration  24: 3.640 s/op
+Iteration  25: 3.651 s/op
+Iteration  26: 3.654 s/op
+Iteration  27: 3.652 s/op
+Iteration  28: 3.655 s/op
+Iteration  29: 3.628 s/op
+Iteration  30: 3.655 s/op
+Iteration  31: 3.656 s/op
+Iteration  32: 3.653 s/op
+Iteration  33: 3.650 s/op
+Iteration  34: 3.610 s/op
+Iteration  35: 3.632 s/op
+Iteration  36: 3.650 s/op
+Iteration  37: 3.657 s/op
+Iteration  38: 3.651 s/op
+Iteration  39: 3.654 s/op
+Iteration  40: 3.643 s/op
+Iteration  41: 3.653 s/op
+Iteration  42: 3.653 s/op
+Iteration  43: 3.657 s/op
+Iteration  44: 3.655 s/op
+Iteration  45: 3.654 s/op
+Iteration  46: 3.653 s/op
+Iteration  47: 3.653 s/op
+Iteration  48: 3.641 s/op
+Iteration  49: 3.657 s/op
+Iteration  50: 3.659 s/op
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  N = 50
+  mean =      3.653 ?(99.9%) 0.021 s/op
+
+  Histogram, s/op:
+    [3.500, 3.550) = 0 
+    [3.550, 3.600) = 1 
+    [3.600, 3.650) = 17 
+    [3.650, 3.700) = 31 
+    [3.700, 3.750) = 0 
+    [3.750, 3.800) = 0 
+    [3.800, 3.850) = 0 
+    [3.850, 3.900) = 0 
+    [3.900, 3.950) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =      3.575 s/op
+     p(50.0000) =      3.652 s/op
+     p(90.0000) =      3.658 s/op
+     p(95.0000) =      3.672 s/op
+     p(99.0000) =      3.921 s/op
+     p(99.9000) =      3.921 s/op
+     p(99.9900) =      3.921 s/op
+     p(99.9990) =      3.921 s/op
+     p(99.9999) =      3.921 s/op
+    p(100.0000) =      3.921 s/op
+
+
+# Run complete. Total time: 00:03:03
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                               (program)  Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/fsm_buffers.xmi    ss   50  3.653 ? 0.021   s/op
+
+Benchmark result is saved to /home/benchmarks/results/fsm_truffle_buffers_graalvm-ce-19.1.1_1565786603979.json
+{"wallclock_times": [183.60903116199188], "core_cycle_counts": [[148171706630], [155645454264], [133367291076], [159479041243]], "aperf_counts": [[147684096446], [155589217339], [133324188918], [159445735343]], "mperf_counts": [[147684624082], [155590144566], [133324958020], [159446659782]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 14:46:27: INFO] Finished 'fsm_truffle_buffers(50)' (default-java variant) under 'fsm_truffle_graalvm-ce-19.1.1'
+[2019-08-14 14:46:27: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 14:46:27: INFO] 6 executions left in scheduler queue
+[2019-08-14 14:46:27: INFO] Next execution is 'logo_truffle_fractal(50)' (default-java variant) under 'logo_truffle_graalvm-ee-19.1.1'
+[2019-08-14 14:46:27: INFO] Estimated completion (next execution): 2019-08-14 14:50:01 (0:03:33 from now)
+[2019-08-14 14:46:27: INFO] Reboot in preparation for next execution
+[2019-08-14 14:46:27: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 14:51:12: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/logo/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/logo_fractal.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: 4.932 s/op
+Iteration   2: 4.489 s/op
+Iteration   3: 4.477 s/op
+Iteration   4: 4.479 s/op
+Iteration   5: 4.476 s/op
+Iteration   6: 4.695 s/op
+Iteration   7: 4.438 s/op
+Iteration   8: 4.338 s/op
+Iteration   9: 4.582 s/op
+Iteration  10: 4.412 s/op
+Iteration  11: 4.413 s/op
+Iteration  12: 4.558 s/op
+Iteration  13: 4.716 s/op
+Iteration  14: 4.429 s/op
+Iteration  15: 4.472 s/op
+Iteration  16: 4.275 s/op
+Iteration  17: 4.292 s/op
+Iteration  18: 4.294 s/op
+Iteration  19: 4.166 s/op
+Iteration  20: 4.214 s/op
+Iteration  21: 4.324 s/op
+Iteration  22: 4.177 s/op
+Iteration  23: 4.198 s/op
+Iteration  24: 4.370 s/op
+Iteration  25: 4.354 s/op
+Iteration  26: 4.322 s/op
+Iteration  27: 4.167 s/op
+Iteration  28: 4.227 s/op
+Iteration  29: 4.342 s/op
+Iteration  30: 4.161 s/op
+Iteration  31: 4.220 s/op
+Iteration  32: 4.341 s/op
+Iteration  33: 4.155 s/op
+Iteration  34: 4.191 s/op
+Iteration  35: 4.380 s/op
+Iteration  36: 4.343 s/op
+Iteration  37: 5.091 s/op
+Iteration  38: 4.212 s/op
+Iteration  39: 4.311 s/op
+Iteration  40: 4.355 s/op
+Iteration  41: 4.308 s/op
+Iteration  42: 4.296 s/op
+Iteration  43: 4.173 s/op
+Iteration  44: 4.251 s/op
+Iteration  45: 4.326 s/op
+Iteration  46: 4.174 s/op
+Iteration  47: 4.224 s/op
+Iteration  48: 4.331 s/op
+Iteration  49: 4.171 s/op
+Iteration  50: 4.208 s/op
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  N = 50
+  mean =      4.357 ?(99.9%) 0.095 s/op
+
+  Histogram, s/op:
+    [4.100, 4.200) = 10 
+    [4.200, 4.300) = 11 
+    [4.300, 4.400) = 14 
+    [4.400, 4.500) = 9 
+    [4.500, 4.600) = 2 
+    [4.600, 4.700) = 1 
+    [4.700, 4.800) = 1 
+    [4.800, 4.900) = 0 
+    [4.900, 5.000) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =      4.155 s/op
+     p(50.0000) =      4.325 s/op
+     p(90.0000) =      4.580 s/op
+     p(95.0000) =      4.813 s/op
+     p(99.0000) =      5.091 s/op
+     p(99.9000) =      5.091 s/op
+     p(99.9900) =      5.091 s/op
+     p(99.9990) =      5.091 s/op
+     p(99.9999) =      5.091 s/op
+    p(100.0000) =      5.091 s/op
+
+
+# Run complete. Total time: 00:03:38
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                (program)  Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/logo_fractal.xmi    ss   50  4.357 ? 0.095   s/op
+
+Benchmark result is saved to /home/benchmarks/results/logo_truffle_fractal_graalvm-ee-19.1.1_1565786853513.json
+{"wallclock_times": [218.94332296901848], "core_cycle_counts": [[173565028573], [142473078725], [203402556152], [307006655280]], "aperf_counts": [[172813458622], [142420879559], [203379745369], [306990122098]], "mperf_counts": [[172813240856], [142420867436], [203379742744], [306990120576]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 14:51:12: INFO] Finished 'logo_truffle_fractal(50)' (default-java variant) under 'logo_truffle_graalvm-ee-19.1.1'
+[2019-08-14 14:51:12: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 14:51:12: INFO] 5 executions left in scheduler queue
+[2019-08-14 14:51:12: INFO] Next execution is 'logo_truffle_fractal(50)' (default-java variant) under 'logo_truffle_graalvm-ce-19.1.1'
+[2019-08-14 14:51:12: INFO] Estimated completion (next execution): 2019-08-14 14:55:21 (0:04:09 from now)
+[2019-08-14 14:51:12: INFO] Reboot in preparation for next execution
+[2019-08-14 14:51:12: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 14:59:05: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/logo/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/logo_fractal.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: 8.460 s/op
+Iteration   2: 8.234 s/op
+Iteration   3: 8.267 s/op
+Iteration   4: 8.228 s/op
+Iteration   5: 8.261 s/op
+Iteration   6: 8.495 s/op
+Iteration   7: 8.252 s/op
+Iteration   8: 8.119 s/op
+Iteration   9: 8.332 s/op
+Iteration  10: 8.193 s/op
+Iteration  11: 8.196 s/op
+Iteration  12: 8.348 s/op
+Iteration  13: 8.528 s/op
+Iteration  14: 8.173 s/op
+Iteration  15: 8.231 s/op
+Iteration  16: 8.022 s/op
+Iteration  17: 8.043 s/op
+Iteration  18: 8.042 s/op
+Iteration  19: 7.902 s/op
+Iteration  20: 7.959 s/op
+Iteration  21: 8.112 s/op
+Iteration  22: 7.902 s/op
+Iteration  23: 7.919 s/op
+Iteration  24: 8.106 s/op
+Iteration  25: 8.093 s/op
+Iteration  26: 8.051 s/op
+Iteration  27: 7.917 s/op
+Iteration  28: 7.976 s/op
+Iteration  29: 8.115 s/op
+Iteration  30: 7.930 s/op
+Iteration  31: 7.946 s/op
+Iteration  32: 8.131 s/op
+Iteration  33: 8.111 s/op
+Iteration  34: 8.078 s/op
+Iteration  35: 7.928 s/op
+Iteration  36: 7.991 s/op
+Iteration  37: 8.775 s/op
+Iteration  38: 7.947 s/op
+Iteration  39: 8.075 s/op
+Iteration  40: 8.120 s/op
+Iteration  41: 8.088 s/op
+Iteration  42: 8.062 s/op
+Iteration  43: 7.929 s/op
+Iteration  44: 7.949 s/op
+Iteration  45: 8.124 s/op
+Iteration  46: 8.102 s/op
+Iteration  47: 8.031 s/op
+Iteration  48: 7.909 s/op
+Iteration  49: 7.974 s/op
+Iteration  50: 8.072 s/op
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  N = 50
+  mean =      8.115 ?(99.9%) 0.090 s/op
+
+  Histogram, s/op:
+    [7.900, 7.950) = 11 
+    [7.950, 8.000) = 4 
+    [8.000, 8.050) = 4 
+    [8.050, 8.100) = 7 
+    [8.100, 8.150) = 9 
+    [8.150, 8.200) = 3 
+    [8.200, 8.250) = 3 
+    [8.250, 8.300) = 3 
+    [8.300, 8.350) = 2 
+    [8.350, 8.400) = 0 
+    [8.400, 8.450) = 0 
+    [8.450, 8.500) = 2 
+    [8.500, 8.550) = 1 
+    [8.550, 8.600) = 0 
+    [8.600, 8.650) = 0 
+    [8.650, 8.700) = 0 
+    [8.700, 8.750) = 0 
+    [8.750, 8.800) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =      7.902 s/op
+     p(50.0000) =      8.090 s/op
+     p(90.0000) =      8.347 s/op
+     p(95.0000) =      8.510 s/op
+     p(99.0000) =      8.775 s/op
+     p(99.9000) =      8.775 s/op
+     p(99.9900) =      8.775 s/op
+     p(99.9990) =      8.775 s/op
+     p(99.9999) =      8.775 s/op
+    p(100.0000) =      8.775 s/op
+
+
+# Run complete. Total time: 00:06:46
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                (program)  Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/logo_fractal.xmi    ss   50  8.115 ? 0.090   s/op
+
+Benchmark result is saved to /home/benchmarks/results/logo_truffle_fractal_graalvm-ce-19.1.1_1565787138367.json
+{"wallclock_times": [406.82662003301084], "core_cycle_counts": [[432193259327], [316806086834], [277400810238], [405662710263]], "aperf_counts": [[431023568307], [316714452919], [277354597468], [405638696542]], "mperf_counts": [[431023211164], [316714423500], [277354584896], [405638693020]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 14:59:05: INFO] Finished 'logo_truffle_fractal(50)' (default-java variant) under 'logo_truffle_graalvm-ce-19.1.1'
+[2019-08-14 14:59:05: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 14:59:05: INFO] 4 executions left in scheduler queue
+[2019-08-14 14:59:05: INFO] Next execution is 'boa_truffle_fibonacci(50)' (default-java variant) under 'boa_truffle_graalvm-ce-19.1.1'
+[2019-08-14 14:59:05: INFO] Estimated completion (next execution): 2019-08-14 15:06:22 (0:07:16 from now)
+[2019-08-14 14:59:05: INFO] Reboot in preparation for next execution
+[2019-08-14 14:59:05: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 15:01:18: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/boa/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/boa_fibonacci.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: 1.419 s/op
+Iteration   2: 1.258 s/op
+Iteration   3: 1.264 s/op
+Iteration   4: 1.363 s/op
+Iteration   5: 1.249 s/op
+Iteration   6: 1.243 s/op
+Iteration   7: 1.261 s/op
+Iteration   8: 1.244 s/op
+Iteration   9: 1.241 s/op
+Iteration  10: 1.245 s/op
+Iteration  11: 1.244 s/op
+Iteration  12: 1.246 s/op
+Iteration  13: 1.274 s/op
+Iteration  14: 1.247 s/op
+Iteration  15: 1.260 s/op
+Iteration  16: 1.244 s/op
+Iteration  17: 1.245 s/op
+Iteration  18: 1.247 s/op
+Iteration  19: 1.242 s/op
+Iteration  20: 1.244 s/op
+Iteration  21: 1.244 s/op
+Iteration  22: 1.243 s/op
+Iteration  23: 1.243 s/op
+Iteration  24: 1.245 s/op
+Iteration  25: 1.250 s/op
+Iteration  26: 1.244 s/op
+Iteration  27: 1.243 s/op
+Iteration  28: 1.243 s/op
+Iteration  29: 1.248 s/op
+Iteration  30: 1.246 s/op
+Iteration  31: 1.244 s/op
+Iteration  32: 1.249 s/op
+Iteration  33: 1.242 s/op
+Iteration  34: 1.242 s/op
+Iteration  35: 1.246 s/op
+Iteration  36: 1.250 s/op
+Iteration  37: 1.245 s/op
+Iteration  38: 1.243 s/op
+Iteration  39: 1.243 s/op
+Iteration  40: 1.241 s/op
+Iteration  41: 1.247 s/op
+Iteration  42: 1.245 s/op
+Iteration  43: 1.245 s/op
+Iteration  44: 1.243 s/op
+Iteration  45: 1.243 s/op
+Iteration  46: 1.244 s/op
+Iteration  47: 1.245 s/op
+Iteration  48: 1.245 s/op
+Iteration  49: 1.263 s/op
+Iteration  50: 1.244 s/op
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  N = 50
+  mean =      1.253 ?(99.9%) 0.015 s/op
+
+  Histogram, s/op:
+    [1.200, 1.225) = 0 
+    [1.225, 1.250) = 40 
+    [1.250, 1.275) = 8 
+    [1.275, 1.300) = 0 
+    [1.300, 1.325) = 0 
+    [1.325, 1.350) = 0 
+    [1.350, 1.375) = 1 
+    [1.375, 1.400) = 0 
+    [1.400, 1.425) = 1 
+    [1.425, 1.450) = 0 
+    [1.450, 1.475) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      1.241 s/op
+     p(50.0000) =      1.245 s/op
+     p(90.0000) =      1.263 s/op
+     p(95.0000) =      1.314 s/op
+     p(99.0000) =      1.419 s/op
+     p(99.9000) =      1.419 s/op
+     p(99.9900) =      1.419 s/op
+     p(99.9990) =      1.419 s/op
+     p(99.9999) =      1.419 s/op
+    p(100.0000) =      1.419 s/op
+
+
+# Run complete. Total time: 00:01:03
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                 (program)  Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/boa_fibonacci.xmi    ss   50  1.253 ? 0.015   s/op
+
+Benchmark result is saved to /home/benchmarks/results/boa_truffle_fibonacci_graalvm-ce-19.1.1_1565787615131.json
+{"wallclock_times": [63.58550797996577], "core_cycle_counts": [[54667807160], [70947957018], [39569683852], [45166849690]], "aperf_counts": [[54481284153], [70931226758], [39545008018], [45152538227]], "mperf_counts": [[54481222764], [70931242414], [39545058530], [45152535540]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 15:01:18: INFO] Finished 'boa_truffle_fibonacci(50)' (default-java variant) under 'boa_truffle_graalvm-ce-19.1.1'
+[2019-08-14 15:01:18: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 15:01:18: INFO] 3 executions left in scheduler queue
+[2019-08-14 15:01:18: INFO] Next execution is 'boa_truffle_sort(50)' (default-java variant) under 'boa_truffle_graalvm-ce-19.1.1'
+[2019-08-14 15:01:18: INFO] Estimated completion (next execution): 2019-08-14 15:02:52 (0:01:33 from now)
+[2019-08-14 15:01:18: INFO] Reboot in preparation for next execution
+[2019-08-14 15:01:18: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 15:03:31: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_222, OpenJDK 64-Bit GraalVM CE 19.1.1, 25.222-b08-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/boa/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/boa_sort.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: 1.700 s/op
+Iteration   2: 1.664 s/op
+Iteration   3: 1.648 s/op
+Iteration   4: 1.747 s/op
+Iteration   5: 1.658 s/op
+Iteration   6: 1.657 s/op
+Iteration   7: 1.644 s/op
+Iteration   8: 1.652 s/op
+Iteration   9: 1.655 s/op
+Iteration  10: 1.656 s/op
+Iteration  11: 1.658 s/op
+Iteration  12: 1.653 s/op
+Iteration  13: 1.656 s/op
+Iteration  14: 1.658 s/op
+Iteration  15: 1.646 s/op
+Iteration  16: 1.647 s/op
+Iteration  17: 1.642 s/op
+Iteration  18: 1.650 s/op
+Iteration  19: 1.657 s/op
+Iteration  20: 1.649 s/op
+Iteration  21: 1.662 s/op
+Iteration  22: 1.642 s/op
+Iteration  23: 1.646 s/op
+Iteration  24: 1.649 s/op
+Iteration  25: 1.648 s/op
+Iteration  26: 1.649 s/op
+Iteration  27: 1.653 s/op
+Iteration  28: 1.643 s/op
+Iteration  29: 1.657 s/op
+Iteration  30: 1.655 s/op
+Iteration  31: 1.651 s/op
+Iteration  32: 1.652 s/op
+Iteration  33: 1.653 s/op
+Iteration  34: 1.654 s/op
+Iteration  35: 1.653 s/op
+Iteration  36: 1.647 s/op
+Iteration  37: 1.656 s/op
+Iteration  38: 1.663 s/op
+Iteration  39: 1.649 s/op
+Iteration  40: 1.652 s/op
+Iteration  41: 1.651 s/op
+Iteration  42: 1.650 s/op
+Iteration  43: 1.658 s/op
+Iteration  44: 1.651 s/op
+Iteration  45: 1.651 s/op
+Iteration  46: 1.653 s/op
+Iteration  47: 1.651 s/op
+Iteration  48: 1.654 s/op
+Iteration  49: 1.651 s/op
+Iteration  50: 1.653 s/op
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  N = 50
+  mean =      1.655 ?(99.9%) 0.008 s/op
+
+  Histogram, s/op:
+    [1.600, 1.613) = 0 
+    [1.613, 1.625) = 0 
+    [1.625, 1.638) = 0 
+    [1.638, 1.650) = 16 
+    [1.650, 1.663) = 30 
+    [1.663, 1.675) = 2 
+    [1.675, 1.688) = 0 
+    [1.688, 1.700) = 1 
+    [1.700, 1.713) = 0 
+    [1.713, 1.725) = 0 
+    [1.725, 1.738) = 0 
+    [1.738, 1.750) = 1 
+    [1.750, 1.763) = 0 
+    [1.763, 1.775) = 0 
+    [1.775, 1.788) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      1.642 s/op
+     p(50.0000) =      1.653 s/op
+     p(90.0000) =      1.662 s/op
+     p(95.0000) =      1.680 s/op
+     p(99.0000) =      1.747 s/op
+     p(99.9000) =      1.747 s/op
+     p(99.9900) =      1.747 s/op
+     p(99.9990) =      1.747 s/op
+     p(99.9999) =      1.747 s/op
+    p(100.0000) =      1.747 s/op
+
+
+# Run complete. Total time: 00:01:23
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                            (program)  Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/boa_sort.xmi    ss   50  1.655 ? 0.008   s/op
+
+Benchmark result is saved to /home/benchmarks/results/boa_truffle_sort_graalvm-ce-19.1.1_1565787727568.json
+{"wallclock_times": [83.75918472302146], "core_cycle_counts": [[87533554140], [33081364413], [87072036123], [72853000234]], "aperf_counts": [[87268790645], [33041969753], [87046670582], [72834280341]], "mperf_counts": [[87268711712], [33041962780], [87046667184], [72834278820]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 15:03:31: INFO] Finished 'boa_truffle_sort(50)' (default-java variant) under 'boa_truffle_graalvm-ce-19.1.1'
+[2019-08-14 15:03:31: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 15:03:31: INFO] 2 executions left in scheduler queue
+[2019-08-14 15:03:31: INFO] Next execution is 'boa_truffle_fibonacci(50)' (default-java variant) under 'boa_truffle_graalvm-ee-19.1.1'
+[2019-08-14 15:03:31: INFO] Estimated completion (next execution): 2019-08-14 15:05:25 (0:01:53 from now)
+[2019-08-14 15:03:31: INFO] Reboot in preparation for next execution
+[2019-08-14 15:03:31: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 15:05:15: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/boa/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/boa_fibonacci.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: 1.381 s/op
+Iteration   2: 1.132 s/op
+Iteration   3: 1.136 s/op
+Iteration   4: 1.235 s/op
+Iteration   5: 1.125 s/op
+Iteration   6: 1.124 s/op
+Iteration   7: 1.125 s/op
+Iteration   8: 1.125 s/op
+Iteration   9: 1.124 s/op
+Iteration  10: 1.125 s/op
+Iteration  11: 1.126 s/op
+Iteration  12: 1.127 s/op
+Iteration  13: 1.127 s/op
+Iteration  14: 1.126 s/op
+Iteration  15: 1.125 s/op
+Iteration  16: 1.125 s/op
+Iteration  17: 1.123 s/op
+Iteration  18: 1.125 s/op
+Iteration  19: 1.124 s/op
+Iteration  20: 1.124 s/op
+Iteration  21: 1.124 s/op
+Iteration  22: 1.123 s/op
+Iteration  23: 1.125 s/op
+Iteration  24: 1.124 s/op
+Iteration  25: 1.125 s/op
+Iteration  26: 1.125 s/op
+Iteration  27: 1.125 s/op
+Iteration  28: 1.124 s/op
+Iteration  29: 1.124 s/op
+Iteration  30: 1.124 s/op
+Iteration  31: 1.124 s/op
+Iteration  32: 1.125 s/op
+Iteration  33: 1.125 s/op
+Iteration  34: 1.124 s/op
+Iteration  35: 1.124 s/op
+Iteration  36: 1.124 s/op
+Iteration  37: 1.124 s/op
+Iteration  38: 1.125 s/op
+Iteration  39: 1.124 s/op
+Iteration  40: 1.123 s/op
+Iteration  41: 1.127 s/op
+Iteration  42: 1.125 s/op
+Iteration  43: 1.122 s/op
+Iteration  44: 1.125 s/op
+Iteration  45: 1.124 s/op
+Iteration  46: 1.125 s/op
+Iteration  47: 1.125 s/op
+Iteration  48: 1.124 s/op
+Iteration  49: 1.125 s/op
+Iteration  50: 1.124 s/op
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  N = 50
+  mean =      1.132 ?(99.9%) 0.019 s/op
+
+  Histogram, s/op:
+    [1.100, 1.125) = 34 
+    [1.125, 1.150) = 14 
+    [1.150, 1.175) = 0 
+    [1.175, 1.200) = 0 
+    [1.200, 1.225) = 0 
+    [1.225, 1.250) = 1 
+    [1.250, 1.275) = 0 
+    [1.275, 1.300) = 0 
+    [1.300, 1.325) = 0 
+    [1.325, 1.350) = 0 
+    [1.350, 1.375) = 0 
+    [1.375, 1.400) = 1 
+
+  Percentiles, s/op:
+      p(0.0000) =      1.122 s/op
+     p(50.0000) =      1.125 s/op
+     p(90.0000) =      1.127 s/op
+     p(95.0000) =      1.181 s/op
+     p(99.0000) =      1.381 s/op
+     p(99.9000) =      1.381 s/op
+     p(99.9900) =      1.381 s/op
+     p(99.9990) =      1.381 s/op
+     p(99.9999) =      1.381 s/op
+    p(100.0000) =      1.381 s/op
+
+
+# Run complete. Total time: 00:00:57
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                 (program)  Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/boa_fibonacci.xmi    ss   50  1.132 ? 0.019   s/op
+
+Benchmark result is saved to /home/benchmarks/results/boa_truffle_fibonacci_graalvm-ee-19.1.1_1565787858180.json
+{"wallclock_times": [57.57552092598053], "core_cycle_counts": [[39657472236], [64801647493], [32585378971], [53414346311]], "aperf_counts": [[39492903768], [64782862162], [32571164643], [53405473831]], "mperf_counts": [[39492841264], [64782877416], [32571163084], [53405491916]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 15:05:15: INFO] Finished 'boa_truffle_fibonacci(50)' (default-java variant) under 'boa_truffle_graalvm-ee-19.1.1'
+[2019-08-14 15:05:15: INFO] Estimated completion (whole session): ????-??-?? ??:??:?? (?:??:?? from now)
+[2019-08-14 15:05:15: INFO] 1 executions left in scheduler queue
+[2019-08-14 15:05:15: INFO] Next execution is 'boa_truffle_sort(50)' (default-java variant) under 'boa_truffle_graalvm-ee-19.1.1'
+[2019-08-14 15:05:15: INFO] Estimated completion (next execution): 2019-08-14 15:06:43 (0:01:27 from now)
+[2019-08-14 15:05:15: INFO] Reboot in preparation for next execution
+[2019-08-14 15:05:15: WARNING] SIMULATED: reboot (--hardware-reboots is OFF)
+[2019-08-14 15:07:00: ERROR] Benchmark returned non-zero or emitted invalid JSON.
+Exception string: No JSON object could be decoded
+return code: 0
+stdout:
+--------------------------------------------------
+# JMH version: 1.21
+# VM version: JDK 1.8.0_221, Java HotSpot(TM) 64-Bit GraalVM EE 19.1.1, 25.221-b11-jvmci-19.1-b01
+# VM invoker: /home/benchmarks/jvms/graalvm-ee-19.1.1/jre/bin/java
+# VM options: -Xms4G -Xmx4G -Dtruffle.class.path.append=/home/benchmarks/benchmark/boa/simplelanguage.jar
+# Warmup: <none>
+# Measurement: 50 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: lang.truffle.benchmark.MyBenchmark.testMethod
+# Parameters: (program = /home/benchmarks/programs/boa_sort.xmi)
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+Iteration   1: 1.288 s/op
+Iteration   2: 1.205 s/op
+Iteration   3: 1.188 s/op
+Iteration   4: 1.269 s/op
+Iteration   5: 1.187 s/op
+Iteration   6: 1.186 s/op
+Iteration   7: 1.183 s/op
+Iteration   8: 1.187 s/op
+Iteration   9: 1.192 s/op
+Iteration  10: 1.185 s/op
+Iteration  11: 1.186 s/op
+Iteration  12: 1.189 s/op
+Iteration  13: 1.187 s/op
+Iteration  14: 1.189 s/op
+Iteration  15: 1.194 s/op
+Iteration  16: 1.187 s/op
+Iteration  17: 1.180 s/op
+Iteration  18: 1.186 s/op
+Iteration  19: 1.186 s/op
+Iteration  20: 1.188 s/op
+Iteration  21: 1.185 s/op
+Iteration  22: 1.185 s/op
+Iteration  23: 1.186 s/op
+Iteration  24: 1.183 s/op
+Iteration  25: 1.192 s/op
+Iteration  26: 1.187 s/op
+Iteration  27: 1.191 s/op
+Iteration  28: 1.191 s/op
+Iteration  29: 1.191 s/op
+Iteration  30: 1.189 s/op
+Iteration  31: 1.187 s/op
+Iteration  32: 1.181 s/op
+Iteration  33: 1.179 s/op
+Iteration  34: 1.181 s/op
+Iteration  35: 1.183 s/op
+Iteration  36: 1.178 s/op
+Iteration  37: 1.184 s/op
+Iteration  38: 1.190 s/op
+Iteration  39: 1.187 s/op
+Iteration  40: 1.189 s/op
+Iteration  41: 1.190 s/op
+Iteration  42: 1.186 s/op
+Iteration  43: 1.188 s/op
+Iteration  44: 1.181 s/op
+Iteration  45: 1.184 s/op
+Iteration  46: 1.192 s/op
+Iteration  47: 1.186 s/op
+Iteration  48: 1.181 s/op
+Iteration  49: 1.175 s/op
+Iteration  50: 1.181 s/op
+
+
+Result "lang.truffle.benchmark.MyBenchmark.testMethod":
+  N = 50
+  mean =      1.190 ?(99.9%) 0.009 s/op
+
+  Histogram, s/op:
+    [1.100, 1.113) = 0 
+    [1.113, 1.125) = 0 
+    [1.125, 1.138) = 0 
+    [1.138, 1.150) = 0 
+    [1.150, 1.163) = 0 
+    [1.163, 1.175) = 0 
+    [1.175, 1.188) = 31 
+    [1.188, 1.200) = 16 
+    [1.200, 1.213) = 1 
+    [1.213, 1.225) = 0 
+    [1.225, 1.238) = 0 
+    [1.238, 1.250) = 0 
+    [1.250, 1.263) = 0 
+    [1.263, 1.275) = 1 
+    [1.275, 1.288) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      1.175 s/op
+     p(50.0000) =      1.187 s/op
+     p(90.0000) =      1.192 s/op
+     p(95.0000) =      1.233 s/op
+     p(99.0000) =      1.288 s/op
+     p(99.9000) =      1.288 s/op
+     p(99.9900) =      1.288 s/op
+     p(99.9990) =      1.288 s/op
+     p(99.9999) =      1.288 s/op
+    p(100.0000) =      1.288 s/op
+
+
+# Run complete. Total time: 00:01:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                            (program)  Mode  Cnt  Score   Error  Units
+MyBenchmark.testMethod  /home/benchmarks/programs/boa_sort.xmi    ss   50  1.190 ? 0.009   s/op
+
+Benchmark result is saved to /home/benchmarks/results/boa_truffle_sort_graalvm-ee-19.1.1_1565787959586.json
+{"wallclock_times": [60.50866357499035], "core_cycle_counts": [[31469386146], [57343444629], [61108546570], [55476333049]], "aperf_counts": [[31214982979], [57314393512], [61094230199], [55458480014]], "mperf_counts": [[31214912564], [57314426886], [61094247876], [55458497644]]}
+
+--------------------------------------------------
+
+stderr:
+--------------------------------------------------
+
+--------------------------------------------------
+
+[2019-08-14 15:07:00: INFO] Finished 'boa_truffle_sort(50)' (default-java variant) under 'boa_truffle_graalvm-ee-19.1.1'
+[2019-08-14 15:07:00: INFO] Estimated completion (whole session): 2019-08-14 15:07:00 (0:00:00 from now)
+[2019-08-14 15:07:00: INFO] 0 executions left in scheduler queue
+[2019-08-14 15:07:00: INFO] Done: Results dumped to benchmarks_results.json.bz2
+[2019-08-14 15:07:00: WARNING] Errors/warnings occurred -- read the log!
+[2019-08-14 15:07:00: INFO] Session completed. Log file at: 'benchmarks.log'
+
+Errors/warnings occurred -- read the log!
+
+Don't forget to disable Krun at boot.

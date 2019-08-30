@@ -1,0 +1,23 @@
+eta_avail_idx=6
+num_mails_sent=0000
+num_reboots=00000007
+start_temp_coretemp:5:temp6_input=00026.00
+start_temp_coretemp:5:temp4_input=00026.00
+start_temp_coretemp:5:temp2_input=00026.00
+start_temp_dell_smm:2:temp2_input=00000.00
+start_temp_coretemp:5:temp1_input=00027.00
+start_temp_coretemp:5:temp5_input=00026.00
+start_temp_dell_smm:2:temp1_input=00027.00
+keys
+C nbody:C:default-c
+C fannkuch_redux:C:default-c
+C nbody:PyPy:default-python
+C fannkuch_redux:PyPy:default-python
+C nbody:LuaJIT:default-lua
+C fannkuch_redux:LuaJIT:default-lua
+O nbody:C:default-c
+O fannkuch_redux:C:default-c
+O nbody:PyPy:default-python
+O fannkuch_redux:PyPy:default-python
+O nbody:LuaJIT:default-lua
+O fannkuch_redux:LuaJIT:default-lua

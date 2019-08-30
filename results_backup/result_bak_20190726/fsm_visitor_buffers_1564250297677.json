@@ -1,0 +1,105 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "fr.mleduc.fsm.FsmVisitorBenchmark.fsmInterpreter",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java",
+        "jvmArgs" : [
+            "-Xms4G",
+            "-Xmx4G"
+        ],
+        "jdkVersion" : "1.8.0_222",
+        "vmName" : "OpenJDK 64-Bit GraalVM CE 19.1.1",
+        "vmVersion" : "25.222-b08-jvmci-19.1-b01",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 50,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "program" : "/home/benchmarks/programs/fsm_buffers.xmi"
+        },
+        "primaryMetric" : {
+            "score" : 2.166818200000001E-4,
+            "scoreError" : 2.0390806123271672E-4,
+            "scoreConfidence" : [
+                1.2773758767283374E-5,
+                4.205898812327168E-4
+            ],
+            "scorePercentiles" : {
+                "0.0" : 7.5583E-5,
+                "50.0" : 1.690125E-4,
+                "90.0" : 2.529252E-4,
+                "95.0" : 2.8929475000000004E-4,
+                "99.0" : 0.003040637,
+                "99.9" : 0.003040637,
+                "99.99" : 0.003040637,
+                "99.999" : 0.003040637,
+                "99.9999" : 0.003040637,
+                "100.0" : 0.003040637
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    0.003040637,
+                    2.7973E-4,
+                    3.00985E-4,
+                    2.53553E-4,
+                    2.67601E-4,
+                    1.86723E-4,
+                    1.9261E-4,
+                    1.98144E-4,
+                    2.2399E-4,
+                    1.89974E-4,
+                    1.92398E-4,
+                    1.93596E-4,
+                    2.01896E-4,
+                    2.20789E-4,
+                    2.10868E-4,
+                    2.07505E-4,
+                    1.84051E-4,
+                    2.47275E-4,
+                    1.75199E-4,
+                    1.71285E-4,
+                    1.60987E-4,
+                    1.64767E-4,
+                    1.7217E-4,
+                    1.80775E-4,
+                    1.63263E-4,
+                    1.66263E-4,
+                    1.8736E-4,
+                    2.03911E-4,
+                    1.98257E-4,
+                    9.7888E-5,
+                    1.6674E-4,
+                    1.08395E-4,
+                    9.5173E-5,
+                    1.10965E-4,
+                    1.50716E-4,
+                    8.2228E-5,
+                    9.4906E-5,
+                    8.749E-5,
+                    9.1573E-5,
+                    8.4166E-5,
+                    1.22494E-4,
+                    1.07147E-4,
+                    8.187E-5,
+                    8.4885E-5,
+                    8.1041E-5,
+                    8.4483E-5,
+                    1.25701E-4,
+                    8.2882E-5,
+                    8.1203E-5,
+                    7.5583E-5
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

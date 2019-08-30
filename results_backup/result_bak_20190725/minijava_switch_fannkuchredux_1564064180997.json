@@ -1,0 +1,45 @@
+[
+    {
+        "benchmark" : "fr.mleduc.minijava.MinijavaSwitchBenchmark.logoInterpreter",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "measurementIterations" : 1,
+        "measurementTime" : "1 s",
+        "params" : {
+            "program" : "/home/benchmarks/programs/minijava_fannkuchredux.xmi"
+        },
+        "primaryMetric" : {
+            "score" : 5.054690131,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 5.054690131,
+                "50.0" : 5.054690131,
+                "90.0" : 5.054690131,
+                "95.0" : 5.054690131,
+                "99.0" : 5.054690131,
+                "99.9" : 5.054690131,
+                "99.99" : 5.054690131,
+                "99.999" : 5.054690131,
+                "99.9999" : 5.054690131,
+                "100.0" : 5.054690131
+            },
+            "scoreUnit" : "s",
+            "rawData" : [
+                [
+                    5.054690131
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+
