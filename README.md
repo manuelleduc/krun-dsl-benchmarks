@@ -1,4 +1,12 @@
-# Measurement Context
+# Context
+
+This project is part of a study on diversity in DSLs. The diversity of execution
+environments and the implementation of interpreters inevitably have an impact on
+language performance. That is why we decided to conduct a study on the performance 
+of several DSLs according to the implementation pattern and the JVM running the DSL
+interpreter. 
+
+# Measurement Platform
 
 ## Hardware
 
@@ -40,7 +48,7 @@
 
 On the repository you have a lot of files and the following are really important.
 
-![Important files in the project](../blob/master/Experiment.png)
+![Important files in the project](./Experiment.png)
 
 ## Where do i put my files
 
@@ -89,7 +97,7 @@ This function is used to run the benchmark and use the entry points we just crea
 In the `examples` folder again, you can find two Krun files `benchmarks.krun` and `onlyjava.krun`.
 Those files purpose is to configure your experiment process.  
 
-## How do i run the experiment
+## How do i run the experiment
 
 There is two solution, one to test that your benchmarking process work correctly and the second
 is to run from `/etc/rc.local` to do the real experiment.
