@@ -1,0 +1,81 @@
+import os
+from krun.vm_defs import JavaJarVMDef
+from krun import EntryPoint
+
+MAIL_TO = ["manuel.leduc@irisa.fr"]
+MAX_MAILS = 2
+
+DIR = os.getcwd()
+JKRUNTIME_DIR = os.path.join(DIR, "krun", "libkruntime", "")
+
+HEAP_LIMIT = 5*2097152  # KiB
+STACK_LIMIT = 5*8192 # KiB
+
+PRE_EXECUTION_CMDS = [
+    "sudo systemctl stop cron",
+    "sudo systemctl stop ssh",
+    "sudo ip link set eno1 down",
+    "sudo systemctl stop exim4",
+]
+
+POST_EXECUTION_CMDS = [
+    "sudo systemctl start cron || true",
+    "sudo systemctl start ssh || true",
+    "sudo ip link set eno1 up || true",
+    "sudo systemctl start exim4 || true",
+]
+
+
+# Variant name -> EntryPoint
+VARIANTS = {
+    "default-java": EntryPoint("KrunEntry", subdir="java"),
+}
+
+TEMP_READ_PAUSE = 1
+AMPERF_RATIO_BOUNDS = 0.995, 1.005
+AMPERF_BUSY_THRESHOLD = 3.4 * 1000 * 1000 * 1000 / 1000  # 3.4 GHz / 1000
+
+JVMS_FOLDER = "/home/benchmarks/jvms/"
+BENCH_FOLDER = "/home/benchmarks/benchmark/models17"
+
+# VMS * PATTERN * PROGRAM
+
+ITERATIONS_ALL_VMS = 1
+ITERATION_PER_BENCH = 200
+N_EXECUTIONS = 10
+
+patterns=['interpreter','modularrevisitor','monolithicrevisitor','visitor','switch']
+programs=['p1', 'p2', 'p3']
+
+VMS = {}
+for pattern in patterns:
+    print(BENCH_FOLDER+'/'+pattern+'/benchmarks.jar')
+    VMS['hotspot_'+pattern] =  {
+        'vm_def': JavaJarVMDef('/home/benchmarks/jvms/hotspot-8u222-b10/bin/java', BENCH_FOLDER+'/'+pattern+'/benchmarks.jar'),
+        'variants': ['default-java'],
+        'n_iterations': ITERATIONS_ALL_VMS,
+    }
+    VMS['openj9_'+pattern] =  {
+        'vm_def': JavaJarVMDef('/home/benchmarks/jvms/openj9-8u222-b10/bin/java', BENCH_FOLDER+'/'+pattern+'/benchmarks.jar'),
+        'variants': ['default-java'],
+        'n_iterations': ITERATIONS_ALL_VMS,
+    }
+    VMS['graal_'+pattern] =  {
+        'vm_def': JavaJarVMDef('/home/benchmarks/jvms/graalvm-ce-19.1.1/bin/java', BENCH_FOLDER+'/'+pattern+'/benchmarks.jar'),
+        'variants': ['default-java'],
+        'n_iterations': ITERATIONS_ALL_VMS,
+    }
+
+
+BENCHMARKS={}
+for program in programs:
+    for pattern in patterns:
+        BENCHMARKS[program+'_'+pattern] = ITERATION_PER_BENCH
+
+SKIP=[]
+for pattern in patterns:
+    for pattern2 in patterns:
+            if pattern != pattern2:
+                for program in programs:
+                    for vm in ['hotspot', 'openj9', 'graal']:
+                        SKIP.append(program+'_'+pattern+':'+vm+'_'+pattern2+':*')
