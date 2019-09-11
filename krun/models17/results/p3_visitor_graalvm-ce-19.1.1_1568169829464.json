@@ -1,0 +1,57 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "fr.mleduc.thesis.MyBenchmark.testMethod",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/benchmarks/jvms/graalvm-ce-19.1.1/jre/bin/java",
+        "jvmArgs" : [
+            "-Xms4G",
+            "-Xmx4G"
+        ],
+        "jdkVersion" : "1.8.0_222",
+        "vmName" : "OpenJDK 64-Bit GraalVM CE 19.1.1",
+        "vmVersion" : "25.222-b08-jvmci-19.1-b01",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 200,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "modelPath" : "testperformance_variant3",
+            "xmiPath" : "/home/benchmarks/programs"
+        },
+        "primaryMetric" : {
+            "score" : 0.127472188,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.127472188,
+                "50.0" : 0.127472188,
+                "90.0" : 0.127472188,
+                "95.0" : 0.127472188,
+                "99.0" : 0.127472188,
+                "99.9" : 0.127472188,
+                "99.99" : 0.127472188,
+                "99.999" : 0.127472188,
+                "99.9999" : 0.127472188,
+                "100.0" : 0.127472188
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    0.127472188
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

@@ -1,0 +1,57 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "fr.mleduc.thesis.MyBenchmark.testMethod",
+        "mode" : "ss",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/benchmarks/jvms/hotspot-8u222-b10/jre/bin/java",
+        "jvmArgs" : [
+            "-Xms4G",
+            "-Xmx4G"
+        ],
+        "jdkVersion" : "1.8.0_222",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.222-b10",
+        "warmupIterations" : 0,
+        "warmupTime" : "single-shot",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 200,
+        "measurementTime" : "single-shot",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "modelPath" : "testperformance_variant3",
+            "xmiPath" : "/home/benchmarks/programs"
+        },
+        "primaryMetric" : {
+            "score" : 0.138183835,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.138183835,
+                "50.0" : 0.138183835,
+                "90.0" : 0.138183835,
+                "95.0" : 0.138183835,
+                "99.0" : 0.138183835,
+                "99.9" : 0.138183835,
+                "99.99" : 0.138183835,
+                "99.999" : 0.138183835,
+                "99.9999" : 0.138183835,
+                "100.0" : 0.138183835
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    0.138183835
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+
