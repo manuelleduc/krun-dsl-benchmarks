@@ -44,7 +44,7 @@ ITERATIONS_ALL_VMS = 1
 ITERATION_PER_BENCH = 200
 N_EXECUTIONS = 10
 
-patterns=['interpreter','modularrevisitor','monolithicrevisitor','visitor','switch']
+patterns=['modularrevisitor','monolithicrevisitor']
 programs=['p1', 'p2', 'p3']
 
 VMS = {}
